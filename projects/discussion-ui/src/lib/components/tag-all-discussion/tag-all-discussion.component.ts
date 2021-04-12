@@ -8,6 +8,7 @@ import { Subscriber, Subscription } from 'rxjs';
 import { ConfigService } from '../../services/config.service';
 import * as CONSTANTS from './../../common/constants.json';
 import { DiscussUtilsService } from '../../services/discuss-utils.service';
+import { TelemetryUtilsService } from './../../telemetry-utils.service';
 
 @Component({
   selector: 'lib-tag-all-discussion',
@@ -32,8 +33,10 @@ export class TagAllDiscussionComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private discussService: DiscussionService, public activatedRoute: ActivatedRoute,
+    private discussService: DiscussionService, 
+    public activatedRoute: ActivatedRoute,
     private configService: ConfigService,
+    private telemetryUtils: TelemetryUtilsService,
     private discussUtils: DiscussUtilsService
   ) { }
 
@@ -114,6 +117,25 @@ export class TagAllDiscussionComponent implements OnInit {
       this.fetchNewData = true
       this.router.navigate([`${this.configService.getRouterSlug()}${CONSTANTS.ROUTES.TAG}tag-discussions`], { queryParams: { page, tagname: this.queryParam } });
     }
+  }
+
+  navigateToDiscussionDetails(discussionData) {
+
+    const matchedTopic = _.find(this.telemetryUtils.getContext(), { type: 'Topic' });
+    if (matchedTopic) {
+      this.telemetryUtils.deleteContext(matchedTopic);
+    }
+
+    this.telemetryUtils.uppendContext({
+      id: _.get(discussionData, 'tid'),
+      type: 'Topic'
+    });
+
+    this.router.navigate([`${this.configService.getRouterSlug()}${CONSTANTS.ROUTES.TOPIC}${_.trim(_.get(discussionData, 'slug'))}`]);
+  }
+
+  logTelemetry(event) {
+    this.telemetryUtils.logInteract(event, NSDiscussData.IPageName.HOME);
   }
 
   // TODO: add refershdata function
