@@ -46,6 +46,7 @@ export class TagAllDiscussionComponent implements OnInit {
     this.activatedRoute.queryParams.subscribe((params) => {
       this.tagName = params.tagname
     })
+    // To check wheather any contexts are there or not from the config service
     if (this.configService.hasContext()) {
       this.fetchContextBasedTagDetails(this.tagName, this.cIds, this.currentActivePage)
     } else {
@@ -54,6 +55,7 @@ export class TagAllDiscussionComponent implements OnInit {
 
   }
 
+  /**Method to fetch the tag based discussion */
   fetchSingleTagDetails(tagname: string, page?: any) {
     this.fetchSingleCategoryLoader = true
     this.discussService.getTagBasedDiscussion(tagname).subscribe(
@@ -70,6 +72,7 @@ export class TagAllDiscussionComponent implements OnInit {
       })
   }
 
+  /** Method to fetch the context based discussions */
   fetchContextBasedTagDetails(tagname: string, cid: any, page?: any) {
     this.fetchSingleCategoryLoader = true
     const req = {
@@ -119,6 +122,7 @@ export class TagAllDiscussionComponent implements OnInit {
     }
   }
 
+  /** Method to navigate to the dicussion detail page on click of tag related discussion */
   navigateToDiscussionDetails(discussionData) {
 
     const matchedTopic = _.find(this.telemetryUtils.getContext(), { type: 'Topic' });
