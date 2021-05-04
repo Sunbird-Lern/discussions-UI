@@ -14,11 +14,15 @@ import { ConfigService } from '../../services/config.service';
 @Component({
   selector: 'lib-lib-entry',
   templateUrl: './lib-entry.component.html',
-  styleUrls: ['./lib-entry.component.scss']
+  styleUrls: ['./lib-entry.component.scss'],
+  /* tslint:disable */
+  host: { class: 'flex-1' },
+  /* tslint:enable */
 })
 export class LibEntryComponent implements OnInit {
 
   data: IdiscussionConfig;
+  headerOption = true;
 
   constructor(
     public activatedRoute: ActivatedRoute,
@@ -43,7 +47,8 @@ export class LibEntryComponent implements OnInit {
     const rawCategories = _.get(this.data, 'categories');
     this.discussionService.forumIds = _.get(rawCategories, 'result');
     this.discussionService.initializeUserDetails(this.discussionService.userName);
-   }
+    this.headerOption = this.configService.getHeaderOption()
+  }
 
   goBack() {
     this.location.back();

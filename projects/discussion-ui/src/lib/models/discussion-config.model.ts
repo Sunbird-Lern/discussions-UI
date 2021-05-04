@@ -5,6 +5,7 @@ export interface IdiscussionConfig {
     categories: Icategory
     path?: string
     routerSlug?: string
+    headerOptions?: boolean
   }
   
   export interface Icontext {

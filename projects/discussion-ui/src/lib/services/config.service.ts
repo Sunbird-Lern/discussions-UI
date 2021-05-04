@@ -37,8 +37,8 @@ export class ConfigService implements OnInit {
   setConfigFromParams(activatedRoute) {
     activatedRoute.queryParams.subscribe((params) => {
       const obj: IdiscussionConfig = {
-        userName : _.get(params, 'userName'),
-        categories : JSON.parse(_.get(params, 'categories'))
+        userName: _.get(params, 'userName'),
+        categories: JSON.parse(_.get(params, 'categories'))
       };
       this._config = obj;
     });
@@ -69,5 +69,9 @@ export class ConfigService implements OnInit {
 
   public getRouterSlug() {
     return this._config.routerSlug ? this._config.routerSlug : '';
+  }
+
+  public getHeaderOption() {
+    return this._config.headerOptions !== undefined ? this._config.headerOptions : true;
   }
 }
