@@ -1,8 +1,8 @@
 <!--modals-->
-<div class="modal fade" id="myModal">
+<div class="modal fade post_comment_modal" id="myModal">
   <div class="discussion-start-modal">
     <div class="discussion-start-modal-content">
-      <form [formGroup]="startForm" class="discussion-start-form">
+      <form [formGroup]="startForm" class="discussion-start-form post_comment_form">
 
         <div class="mb-16" *ngIf="showSelectCategory" [ngClass]="{ 'is-invalid': showError('subTitle') }">
           <label class="start-form-label">Select Category*</label>
@@ -32,19 +32,18 @@
             <textarea minlength="8" class="start-form-field-control py-8" rows="8" formControlName="description"
               #description name="moretext" placeholder="Type here (minimum 8 characters)"></textarea>
           </div>
-          <small class="text-error" *ngIf="showError('description')"
+          <!-- <small class="text-error" *ngIf="showError('description')"
             i18n="description Error|Explains description is required"> Description is mandatory. It should be minimum of
-            8 characters </small>
+            8 characters </small> -->
         </div>
 
-        <div #postTags [ngClass]="{ 'is-invalid': showError('tags') }" class="mb-24">
-          <label class="mb-0">Tags</label>
+        <div #postTags [ngClass]="{ 'is-invalid': showError('tags') }" class="post-tags">
+          <label class="mb-0 start-form-label">Tags</label>
           <div *ngFor="let tag of postTagsArray">
             {{ tag }}
           </div>
           <!-- TODO: check the padding for placeholder -->
-          <tag-input class="py-8" secondaryPlaceholder="Add a tag and press Enter" formControlName="tags"
-            [modelAsStrings]="true">
+          <tag-input secondaryPlaceholder="Add a tag and press Enter" formControlName="tags" [modelAsStrings]="true">
           </tag-input>
         </div>
 
@@ -58,14 +57,14 @@
           <button (click)="closeModal('discard');logTelemetry($event)" mat-raised-button type="button"
             class="sb-btn sb-btn-normal sb-btn-outline-primary" id="discard-discussion-start-form">Cancel
           </button>
-          <span *ngIf="uploadSaveData" class="px-4 flex items-center justify-center">
+          <span *ngIf="uploadSaveData" class="px-4">
           </span>
-          <button *ngIf="mode !== 'edit'" type="submit" class="sb-btn sb-btn-normal sb-btn-primary ml-16"
+          <button *ngIf="mode !== 'edit'" type="submit" class="df-btn df-submit-btn"
             [ngClass]="{'df-btn-disabled': !enableSubmitButton }" [disabled]="!enableSubmitButton"
             (click)="submitPost(startForm);logTelemetry($event)" id="submit-discussion-start-form">
-            <span class="text-white">Submit</span>
+            <span class="text-white">Submit Post</span>
           </button>
-          <button *ngIf="mode === 'edit'" type="submit" class="sb-btn sb-btn-normal sb-btn-primary ml-16"
+          <button *ngIf="mode === 'edit'" type="submit" class="df-btn df-update-btn"
             [ngClass]="{'df-btn-disabled': !enableSubmitButton }" [disabled]="!enableSubmitButton"
             (click)="updatePost(startForm);logTelemetry($event)" id="update-topic-popup">
             <span class="text-white">Update</span>
@@ -74,10 +73,9 @@
         ​
       </form>
       ​
-      <input type="hidden" i18-value i18-aria-value aria-value="Post created successful"
-        value="Post created successfully!" #toastSuccess />
-      <input type="hidden" i18-value i18-aria-value aria-value="unable to create post"
-        value="Error in creating new post!" #toastError />
+      <input type="hidden" aria-value="Post created successful" value="Post created successfully!" #toastSuccess />
+      <input type="hidden" aria-value="unable to create post" value="Error in creating new post!" #toastError />
     </div>
   </div>
 </div>
+
