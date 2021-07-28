@@ -1,7 +1,7 @@
 import { TelemetryUtilsService } from './../../telemetry-utils.service';
 import { DiscussionService } from './../../services/discussion.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Component, OnInit, OnDestroy, Input, Renderer2 } from '@angular/core';
+import { Component, OnInit, OnDestroy, Input, Renderer2, Output, EventEmitter } from '@angular/core';
 import { NSDiscussData } from './../../models/discuss.model';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import * as CONSTANTS from '../../common/constants.json';
@@ -11,6 +11,8 @@ import { Subscription } from 'rxjs';
 import { ConfigService } from '../../services/config.service';
 /* tslint:enable */
 import { Location } from '@angular/common';
+
+import { NavigationServiceService } from '../../navigation-service.service';
 
 const MSGS = {
   deletePost: `Are you sure you want to delete this Post? This can't be undone.`,
@@ -25,6 +27,9 @@ const MSGS = {
 export class DiscussionDetailsComponent implements OnInit, OnDestroy {
   @Input() topicId: any;
   @Input() slug: string;
+  @Input() widget: boolean;
+
+  @Output() stateChange: EventEmitter<any> = new EventEmitter();
 
   routeParams: any;
   currentActivePage = 1;
@@ -56,7 +61,8 @@ export class DiscussionDetailsComponent implements OnInit, OnDestroy {
     public router: Router,
     private telemetryUtils: TelemetryUtilsService,
     private renderer: Renderer2,
-    private location: Location
+    private location: Location,
+    private navigationService: NavigationServiceService,
   ) {
     /**
      * @description - It will check for the outside click while kebab menu is in open mode.
@@ -88,7 +94,43 @@ export class DiscussionDetailsComponent implements OnInit, OnDestroy {
     this.telemetryUtils.logImpression(NSDiscussData.IPageName.DETAILS);
   }
 
+  // tslint:disable-next-line: use-life-cycle-interface
+  ngOnChanges() {
+    if (!this.topicId && !this.slug) {
+      this.route.params.subscribe(params => {
+        this.routeParams = params;
+        this.slug = _.get(this.routeParams, 'slug');
+        this.topicId = _.get(this.routeParams, 'topicId');
+        this.refreshPostData(this.currentActivePage);
+        // this.getRealtedDiscussion(this.cid)
+      });
+    } else {
+      this.refreshPostData(this.currentActivePage);
+      // this.getRealtedDiscussion(this.cid)
+    }
+  }
 
+  // new method
+  acceptData(discuss) {
+    // debugger
+    const matchedTopic = _.find(this.telemetryUtils.getContext(), { type: 'Topic' });
+    if (matchedTopic) {
+      this.telemetryUtils.deleteContext(matchedTopic);
+    }
+
+    this.telemetryUtils.uppendContext({
+      id: _.get(discuss, 'tid'),
+      type: 'Topic'
+    });
+
+    const slug = _.trim(_.get(discuss, 'slug'))
+    const input = {
+      data: { url: `${this.configService.getRouterSlug()}${CONSTANTS.ROUTES.TOPIC}${slug}`, queryParams: {} },
+      action: CONSTANTS.STATES.CATEGORY_DETAILS };
+
+    this.navigationService.navigate(input);
+    this.stateChange.emit({ action: CONSTANTS.STATES.CATEGORY_DETAILS, title: discuss.title, tid: discuss.tid });
+  }
 
   initializeFormFiled() {
     this.postAnswerForm = this.formBuilder.group({
@@ -262,7 +304,7 @@ export class DiscussionDetailsComponent implements OnInit, OnDestroy {
 
   navigateWithPage(page: any) {
     if (page !== this.currentActivePage) {
-      this.router.navigate([`${this.configService.getRouterSlug()}${CONSTANTS.ROUTES.CATEGORY} ${this.topicId}`], { queryParams: { page } });
+      this.router.navigate([`${this.configService.getRouterSlug()}${CONSTANTS.ROUTES.CATEGORY} ${this.topicId}`], { queryParams: { page },  queryParamsHandling: "merge"  });
     }
   }
 
