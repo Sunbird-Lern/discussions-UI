@@ -54,6 +54,8 @@ export class MyDiscussionComponent implements OnInit {
       //   localStorage.setItem(this.configSvc.userProfile.userId, this.profilePhoto);
       // }
     }, error => {
+      // error code check
+      this.discussService.showTrafficAlert(error);
       this.showLoader = false;
       // TODO: Toaster
       console.log('error fetching user details');
@@ -108,6 +110,9 @@ export class MyDiscussionComponent implements OnInit {
               this.showLoader = false;
               this.discussionList = [];
             }
+          }, error => {
+            // error code check
+            this.discussService.showTrafficAlert(error);
           });
           break;
         case 'saved':
@@ -123,8 +128,10 @@ export class MyDiscussionComponent implements OnInit {
             }
           },
             // tslint:disable-next-line
-            () => {
+            (error) => {
               this.discussionList = [];
+              // error code check
+              this.discussService.showTrafficAlert(error);
             })
           break;
         case 'watched':
@@ -145,8 +152,10 @@ export class MyDiscussionComponent implements OnInit {
             }
           },
             // tslint:disable-next-line
-            () => {
+            (error) => {
               this.discussionList = [];
+              // error code check
+              this.discussService.showTrafficAlert(error);
             })
           break;
         case 'downvoted':
@@ -163,8 +172,10 @@ export class MyDiscussionComponent implements OnInit {
             }
           },
             // tslint:disable-next-line
-            () => {
+            (error) => {
               this.discussionList = [];
+              // error code check
+              this.discussService.showTrafficAlert(error);
             })
           break;
         default:
@@ -202,6 +213,8 @@ export class MyDiscussionComponent implements OnInit {
       this.discussionList = [...this.discussionList, ...(_.get(this.data, 'posts'))];
       this.pagination = _.get(this.data, 'pagination');
     }, error => {
+      // error code check
+      this.discussService.showTrafficAlert(error);
       this.showLoader = false;
       console.log(error);
     });

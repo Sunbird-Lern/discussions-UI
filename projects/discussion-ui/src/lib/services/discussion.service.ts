@@ -284,4 +284,13 @@ export class DiscussionService {
     return this.csDiscussionService.deleteTopic(tid);
   }
 
+  /** To check the error code and show alert message
+   *  if it is 502 - error 
+   */
+  showTrafficAlert(errorObject) {
+    const status = errorObject.status;
+    if([502, '502'].includes(status)) {
+      this.alertEvent.next();
+    }
+  }
 }
