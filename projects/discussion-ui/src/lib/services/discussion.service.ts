@@ -288,9 +288,11 @@ export class DiscussionService {
    *  if it is 502 - error 
    */
   showTrafficAlert(errorObject) {
-    const status = errorObject.status;
-    if([502, '502'].includes(status)) {
-      this.alertEvent.next();
+    if(errorObject && errorObject.status) {
+      const error = errorObject.status.toString();
+      if(error.indexOf('502') === 0) {
+        this.alertEvent.next();
+      }
     }
   }
 }
