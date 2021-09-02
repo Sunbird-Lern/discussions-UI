@@ -65,18 +65,7 @@ export class MyDiscussionComponent implements OnInit {
   ngOnInit() {
     this.telemetryUtils.setContext([]);
     this.telemetryUtils.logImpression(NSDiscussData.IPageName.MY_DISCUSSION);
-    const userId = this.discussService.userId;
-    combineLatest([
-      this.discussService.fetchUserProfile(userId),
-      this.discussService.fetchRecentPost()
-    ]).subscribe(result => {
-      this.showLoader = false;
-      this.data = _.merge(result[0], result[1]);
-      this.filter(this.currentFilter, false);
-    }, error => {
-      this.showLoader = false;
-      console.log(error);
-    });
+    this.filter(this.currentFilter, false);
   }
 
   /**
@@ -217,10 +206,9 @@ export class MyDiscussionComponent implements OnInit {
    */
   getRecentTopics(scrollIndex: number) {
     const userId = this.discussService.userId;
-    const userSlug = this.discussService.userDetails.userslug;
     combineLatest([
       this.discussService.fetchUserProfile(userId),
-      this.discussService.fetchRecentPost()
+      this.discussService.fetchRecentPost(scrollIndex)
     ]).subscribe(result => {
       this.showLoader = false;
       this.data = _.merge(result[0], result[1]);
