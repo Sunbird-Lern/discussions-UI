@@ -49,7 +49,6 @@ export class DiscussAllComponent implements OnInit {
 
   ngOnInit() {
     this.telemetryUtils.logImpression(NSDiscussData.IPageName.HOME);
-    console.log('testing ')
     this.cIds = this.configService.getCategories()
     this.categoryId = this.discussionService.getContext(CONTEXT_PROPS.cid);
     if (this.configService.hasContext()) {
