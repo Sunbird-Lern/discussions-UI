@@ -72,7 +72,7 @@ describe('DiscussCategoryComponent', () => {
   //   })
   // })
 
-  describe('fetchAllAvailableCategories', () => {
+  // describe('fetchAllAvailableCategories', () => {
     // it('Should fetch all available categories', (done) => {
     //   // arrange
     //   const categoryResp = {
@@ -90,18 +90,18 @@ describe('DiscussCategoryComponent', () => {
     //   });
     // })
 
-    it('Should handle failure scenarion while fetching categories', (done) => {
-      // arrange
-      mockDiscussionService.fetchSingleCategoryDetails = jest.fn(() => throwError({}))
-      // act
-      discussCategoryComponent.fetchAllAvailableCategories(['some_cid'])
-      // assert
-      setTimeout(() => {
-        expect(discussCategoryComponent.showLoader).toBe(false);
-        done();
-      });
-    })
-  })
+  //   it('Should handle failure scenarion while fetching categories', (done) => {
+  //     // arrange
+  //     mockDiscussionService.fetchSingleCategoryDetails = jest.fn(() => throwError({}))
+  //     // act
+  //     discussCategoryComponent.fetchAllAvailableCategories(['some_cid'])
+  //     // assert
+  //     setTimeout(() => {
+  //       expect(discussCategoryComponent.showLoader).toBe(false);
+  //       done();
+  //     });
+  //   })
+  // })
 
   describe('navigateToDiscussionPage', () => {
     it('should navigate to category page', (done) => {
@@ -125,18 +125,18 @@ describe('DiscussCategoryComponent', () => {
       });
     });
 
-    it('should handle error scenario', (done) => {
-      // arrange
-      mockTelemetryUtilsService.uppendContext = jest.fn();
-      mockDiscussionService.fetchSingleCategoryDetails = jest.fn(() => throwError('err'))
-      // act
-      discussCategoryComponent.navigateToDiscussionPage('some_cid')
-      // aseert
-      setTimeout(() => {
-        expect(discussCategoryComponent.showLoader).toBe(false);
-        done();
-      });
-    });
+    // it('should handle error scenario', (done) => {
+    //   // arrange
+    //   mockTelemetryUtilsService.uppendContext = jest.fn();
+    //   mockDiscussionService.fetchSingleCategoryDetails = jest.fn(() => throwError('err'))
+    //   // act
+    //   discussCategoryComponent.navigateToDiscussionPage('some_cid')
+    //   // aseert
+    //   setTimeout(() => {
+    //     expect(discussCategoryComponent.showLoader).toBe(false);
+    //     done();
+    //   });
+    // });
   });
 
   describe('logTelemetry', () => {
