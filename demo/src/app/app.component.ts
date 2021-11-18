@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { CsModule } from '@project-sunbird/client-services';
 
@@ -7,9 +7,11 @@ import { CsModule } from '@project-sunbird/client-services';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.sass']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'demo';
-  constructor(public router: Router) {
+  dataThemeAttribute: string;
+  @ViewChild('darkThemeToggle', { static: true }) darkThemeToggle: ElementRef;
+  constructor(public router: Router, private renderer: Renderer2) {
   }
   ngOnInit() {
     CsModule.instance.init({
@@ -49,6 +51,18 @@ export class AppComponent {
         }
       }
     });
+  }
+
+  changeTheme() {
+    this.dataThemeAttribute = document.documentElement.getAttribute('data-theme');
+    this.dataThemeAttribute = this.dataThemeAttribute === 'Default' ? 'Darkmode' : 'Default';
+    document.documentElement.setAttribute('data-theme', this.dataThemeAttribute);
+  }
+
+  changeLayout() {
+    this.dataThemeAttribute = document.documentElement.getAttribute('layout');
+    this.dataThemeAttribute = this.dataThemeAttribute === 'old' ? 'joy' : 'old';
+    document.documentElement.setAttribute('layout', this.dataThemeAttribute);
   }
 
   navigate() {

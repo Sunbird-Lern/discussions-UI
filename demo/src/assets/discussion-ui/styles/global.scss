@@ -1,11 +1,83 @@
 
 :root {
     font-size: 16px;
-   // base colors
-    --blue: #024f9d;
-    --yellow: #ffc107;
-    --black: #000000;
-    --white: #ffffff;
+   // Base Theme color
+  
+	--blue: #024f9d;
+	--green: #008840;
+	--orange: #e55a28;
+	--red: #ff4558;
+	--indigo: #6610f2;
+	--purple: #6f42c1;
+	--pink: #e83e8c;
+	--yellow: #ffc107;
+	--teal: #20c997;
+	--cyan: #17a2b8;
+	--black: #000000;
+	--white: #ffffff;
+  
+	// Base Theme color variations
+  
+	--primary: var(--blue);
+	--secondary: #008840;
+	--tertiary: #e55a28;
+  
+	// gray colors shades
+	--gray-0: #f2f2f2; // place holder active bg #F2F2F2
+	--gray-100: #cccccc; // disable btn bg, icon color #CCCCCC
+	--gray-200: #999999; // disable text, place holder text #999999
+	--gray-300: #969696; // sub heading 2 #969696
+	--gray-400: #999999; // sub heading #666666
+	--gray-600: #222222; // Dark theme menu bg color
+	--gray-800: #333333; // text color #333333
+  
+	// primary colors
+	--primary-0: #f3f7fa; // bg
+	--primary-100: #edf4f9; // default button bg
+	--primary-200: #80a7ce; // divider
+	--primary-250: #d3e7f4; //pagination bg color
+	--primary-300: #7ab4ee; // outline, focus fields
+	--primary-400: var(--primary); // button bg, heading, table titles, links, toggles
+	--primary-600: #005391; // on press
+	--primary-800: #002e50; // hover
+  
+	// secondary colors
+	--secondary-0: #e1ffdf; // toast bg, label
+	--secondary-100: #00c786; // button bg bg, toast
+	--secondary-200: #07bc81; // button bg
+	--secondary-400: var(--secondary); // hover
+  
+	// tertiary colors
+	--tertiary-0: #feedd7; // toast bg, label
+	--tertiary-100: #ffa11d; // buttong bg, toast
+	--tertiary-400: var(--tertiary); // icon, label, notification bg
+  
+	// red colors
+	--red-0: #fbccd1; // toast bg
+	--red-100: #ff6979; // buttong bg, toast
+	--red-400: var(--red); // icon color, lable, notification
+  
+	// fonts
+	--font-default-size: 0.875rem;
+	--font-size-base: var(--font-default-size); // 14px Assumes the browser default, typically `16px`
+	--font-weight-light: 300;
+	--font-weight-normal: 400;
+	--font-weight-bold: 700;
+	--line-height-base: calc(var(--font-size-base) * 1.61803398875);
+	--h1-font-size: 2rem; // 32px
+	--h2-font-size: 1.75rem; // 28px
+	--h3-font-size: 1.5rem; // 24px
+	--h4-font-size: 1.2rem; // 20px
+	--h5-font-size: 1rem; // 16px
+	--h6-font-size: var(--font-size-base); // 14px
+	--font-size-lg: var(--h4-font-size); //20px
+	--font-size-md: var(--h5-font-size); // 16px
+	--font-size-normal: var(--font-size-base); // 14px
+	--font-size-sm: 0.75rem; // 12px
+	--font-size-xs: 0.625rem; // 10px
+	--p-font-size: var(--font-size-base); //14px
+    --df-theme-bg: white;
+    --df-text:#333;
 }
 
 .recent-tabs{

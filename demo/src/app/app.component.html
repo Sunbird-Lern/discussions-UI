@@ -1,3 +1,7 @@
-<button (click)="navigate()"> navigate </button>
-
+<div class="change-theme">
+    <button class="sb-btn sb-btn-primary sb-btn-md" (click)="navigate()"> navigate </button>
+    <button class="sb-btn sb-btn-primary sb-btn-md" (click)="changeTheme()" #darkThemeToggle>Change theme</button>
+    <button class="sb-btn sb-btn-primary sb-btn-md" (click)="changeLayout()" #layoutToggle>Change Layout</button>
+</div>
 <router-outlet></router-outlet>
+
