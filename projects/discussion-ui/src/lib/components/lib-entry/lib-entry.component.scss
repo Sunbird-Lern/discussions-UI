@@ -1,81 +1,61 @@
-  .df-back-btn-container {
-      background: var(--white);
-      margin-bottom: 1rem;
+::ng-deep :root {
+    --df-btn-container-bg:white;
+}
+.df-btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+    background-color: var(--df-btn-container-bg);
+    .df-back-btn {
+        display: flex;
+        align-items: center;
+        border: 0;
+        font-size: 0.75rem;
+        padding: 0 1rem;
+        border-radius: 0.25rem;
 
-      .df-btn-container {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          padding: 1rem 0;
+        img {
+            width: 1rem;
+            height: 1rem;
+            margin-right: 0.25rem;
+        }
+    }
 
-          .df-back-btn {
-              display: flex;
-              align-items: center;
-              border: 0;
-              font-size: 0.75rem;
-              padding: 0 1rem;
-              border-radius: 0.25rem;
+    .df-close-btn {
+        font-weight: 700;
+        border: 0;
+        font-size: 0.75rem;
+        padding: 0 1rem;
+        border-radius: 0.25rem;
 
-              img {
-                  width: 1rem;
-                  height: 1rem;
-                  margin-right: 0.25rem;
-              }
-          }
+        img {
+            width: 0.5rem;
+            height: 0.5rem;
+            margin-left: .25rem;
+        }
+    }
+}
 
-          .df-close-btn {
-              font-weight: 700;
-              border: 0;
-              font-size: 0.75rem;
-              padding: 0 1rem;
-              border-radius: 0.25rem;
+.discussion-forum-content {
+    margin: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 1rem;
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
 
-              img {
-                  width: 0.5rem;
-                  height: 0.5rem;
-                  margin-left: .25rem;
-              }
-          }
-      }
-  }
+    .discuss-left-panel {
+        @media (max-width: 768px) {
+            padding: 0 0 1rem 0;
+            width: auto;
+        }
+    }
 
-  .discussion-forum {
-      width: 100%;
-      min-height: 100vh;
-      position: relative;
-      z-index: unset;
-
-      @media (max-width: 768px) {
-          height: 100vh;
-          // overflow: auto;
-          // background: #e9e8d9;
-      }
-
-      .discussion-forum-content {
-          display: grid;
-          grid-template-columns: 1fr 4fr;
-
-          @media (max-width: 768px) {
-              grid-template-columns: 1fr;
-          }
-
-          .discuss-left-panel {
-              padding: 1.5rem 0;
-              position: relative;
-              z-index: 2;
-
-              @media (max-width: 768px) {
-                  padding: 0 0 1rem 0;
-                  width: auto;
-              }
-          }
-
-          .discuss-right-panel {
-              padding: 1.5rem;
-
-              @media (max-width: 768px) {
-                  padding: 0px 0px 3rem 0px;
-              }
-          }
-      }
-  }
+    .discuss-right-panel {
+        @media (max-width: 768px) {
+            padding: 0px 0px 3rem 0px;
+        }
+    }
+}
