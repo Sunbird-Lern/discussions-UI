@@ -37,3 +37,4 @@ jobs:
       - run:
           name: Run SonarScan
           command: /tmp/sonar-scanner-4.6.2.2472-linux/bin/sonar-scanner
+          
