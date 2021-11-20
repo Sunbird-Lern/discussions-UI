@@ -2,7 +2,7 @@
 
 This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.0.
 
-## Discussion playgroud app setup
+## Discussion demo application
 
 Follow this document to test discussions-UI library in local env [link](https://project-sunbird.atlassian.net/wiki/spaces/SBDES/pages/2269708311/Developer+s+Doc+How+to+set-up+and+use+Discussions-UI+library)
 
