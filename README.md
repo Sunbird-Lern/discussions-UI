@@ -2,6 +2,10 @@
 
 This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.0.
 
+## Discussion playgroud app setup
+
+Follow this document to test discussions-UI library in local env [link](https://project-sunbird.atlassian.net/wiki/spaces/SBDES/pages/2269708311/Developer+s+Doc+How+to+set-up+and+use+Discussions-UI+library)
+
 ## Code scaffolding
 
 Run `ng generate component component-name --project discussion-ui` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project discussion-ui`.
