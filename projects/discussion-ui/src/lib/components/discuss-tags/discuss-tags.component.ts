@@ -28,6 +28,7 @@ export class DiscussTagsComponent implements OnInit {
   paramsSubscription: Subscription;
   getParams: any;
   cIds: any;
+  slug: any;
   constructor(
     private discussionService: DiscussionService,
     private telemetryUtils: TelemetryUtilsService,
@@ -92,7 +93,8 @@ export class DiscussTagsComponent implements OnInit {
 
     tagdata.tagname = tag.value;
     this.queryParam = tagdata;
-    const routerSlug = this.configService.getConfig().routerSlug ? this.configService.getConfig().routerSlug : '';
+    this.slug = this.configService.getConfig();
+    const routerSlug = this.slug.routerSlug ? this.slug.routerSlug : '';
     const input = { data: { url: `${routerSlug}${CONSTANTS.ROUTES.TAG}tag-discussions`,
     queryParams: this.queryParam, tagName: this.queryParam.tagName }, action: 'tagsAll'};
     this.navigationService.navigate(input);

@@ -1,4 +1,5 @@
 import { ActivatedRoute, Router } from "@angular/router";
+import { NavigationServiceService } from '../../navigation-service.service';
 import { of, throwError } from "rxjs";
 import { NSDiscussData } from "../../models/discuss.model";
 import { ConfigService } from "../../services/config.service";
@@ -6,12 +7,15 @@ import { DiscussUtilsService } from "../../services/discuss-utils.service";
 import { DiscussionService } from "../../services/discussion.service";
 import { TelemetryUtilsService } from "../../telemetry-utils.service";
 import { DiscussTagsComponent } from "./discuss-tags.component"
+import { IdiscussionConfig } from "projects/discussion-ui/src/public-api";
 
 describe('DiscussCategoryComponent', () => {
   let discusstagsComponent: DiscussTagsComponent
 
   const mockDiscussionService: Partial<DiscussionService> = {};
-  const mockConfigService: Partial<ConfigService> = {};
+  const mockConfigService: Partial<ConfigService> = {
+    getConfig: jest.fn().mockReturnValueOnce({routerSlug: false})
+  };
   const mockRouter: Partial<Router> = {};
   const mockActivatedRoute: Partial<ActivatedRoute> = {};
   const mockTelemetryUtilsService: Partial<TelemetryUtilsService> = {
@@ -19,7 +23,7 @@ describe('DiscussCategoryComponent', () => {
     logImpression: jest.fn()
   };
   const mockDiscussUtilsService: Partial<DiscussUtilsService> = {};
-
+  const mockNavigationService:  Partial<NavigationServiceService> = {};
 
   beforeAll(() => {
     discusstagsComponent = new DiscussTagsComponent(
@@ -28,7 +32,8 @@ describe('DiscussCategoryComponent', () => {
       mockRouter as Router,
       mockActivatedRoute as ActivatedRoute,
       mockConfigService as ConfigService,
-      mockDiscussUtilsService as DiscussUtilsService
+      mockDiscussUtilsService as DiscussUtilsService,
+      mockNavigationService as NavigationServiceService
     );
   });
 
@@ -113,12 +118,15 @@ describe('DiscussCategoryComponent', () => {
           value: 'some_val'
         }
       } as any
-      mockRouter.navigate = jest.fn();
-      mockConfigService.getRouterSlug = jest.fn();
+
+      discusstagsComponent.slug = {routerSlug: false}
+      mockConfigService.getConfig = jest.fn().mockReturnValue({routerSlug: false});
+      
+      mockNavigationService.navigate = jest.fn();
       // act
       discusstagsComponent.getAllDiscussions(req)
       // assert
-      expect(mockRouter.navigate).toHaveBeenCalled();
+      expect(mockNavigationService.navigate).toHaveBeenCalled();
     });
   });
 
