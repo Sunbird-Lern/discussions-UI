@@ -12,7 +12,7 @@ describe('DiscussHomeComponent', () => {
 
   const mockDiscussionService: Partial<DiscussionService> = {};
   const mockConfigService: Partial<ConfigService> = {
-    getCategories: jest.fn()
+    getCategories: jest.fn(),
   };
   const mockRouter: Partial<Router> = {
     navigate: jest.fn()
@@ -38,6 +38,29 @@ describe('DiscussHomeComponent', () => {
     jest.clearAllMocks();
   });
 
+
+  describe('getDiscussionList', () => {
+    it('should fetch discussion list', (done) => {
+      // arrange
+      const topics = {
+        'privileges.topics:create': true,
+        topics: [
+          {
+            id: 'tid_1'
+          }
+        ]
+      };
+      mockDiscussionService.getContextBasedTopic = jest.fn(() => of(topics))
+      // act
+      discussHomeComponent.getDiscussionList('2');
+      // assert
+      setTimeout(() => {
+        expect(discussHomeComponent.isTopicCreator).toBe(true);
+        done()
+      });
+    });
+  });
+
   it('should create an instance of DiscussHomeComponent', () => {
     // arrange
     const params = {
@@ -46,7 +69,7 @@ describe('DiscussHomeComponent', () => {
     const cid = new  ReplaySubject(1)
     mockActivatedRoute.params = of(params);
     mockDiscussionService.getContext = jest.fn(() => 'some_cid');
-    mockConfigService.setCategoryId = jest.fn(() => cid as any);
+    // mockConfigService.setCategoryId = jest.fn(() => of(1));
     // act
     discussHomeComponent.ngOnInit();
     
@@ -79,27 +102,6 @@ describe('DiscussHomeComponent', () => {
     });
   });
 
-  describe('getDiscussionList', () => {
-    it('should fetch discussion list', (done) => {
-      // arrange
-      const topics = {
-        'privileges.topics:create': true,
-        topics: [
-          {
-            id: 'tid_1'
-          }
-        ]
-      };
-      mockDiscussionService.getContextBasedTopic = jest.fn(() => of(topics))
-      // act
-      discussHomeComponent.getDiscussionList('2');
-      // assert
-      setTimeout(() => {
-        expect(discussHomeComponent.isTopicCreator).toBe(true);
-        done()
-      });
-    });
-  });
 
   describe('logTelemetry', () => {
     it('should log telemetry', () => {
