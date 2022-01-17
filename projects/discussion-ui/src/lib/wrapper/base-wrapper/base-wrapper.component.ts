@@ -16,7 +16,11 @@ export class BaseWrapperComponent implements OnInit {
 
   @Input() config: IdiscussionConfig
   state: string
-  constructor(private navigationServiceService: NavigationServiceService, private eventService: EventsService, private configSvc: ConfigService, private discussionService: DiscussionService) { }
+  constructor(
+    private navigationServiceService: NavigationServiceService, 
+    private eventService: EventsService, 
+    private configSvc: ConfigService,
+    private discussionService: DiscussionService) { }
 
   ngOnInit() {
     this.navigationServiceService.initService('wrapperService')

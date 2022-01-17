@@ -59,10 +59,12 @@ export class DiscussHomeComponent implements OnInit {
     this.telemetryUtils.logImpression(NSDiscussData.IPageName.HOME);
     this.route.params.subscribe(params => {
       this.configService.setCategoryId.subscribe((categoryIds: string) => {
+      if (categoryIds) {
         this.routeParams = categoryIds;
         // categoryIds = this.discussionService.getContext(CONTEXT_PROPS.cid)
         categoryIds = this.categoryId ? this.categoryId : categoryIds
         this.getDiscussionList(categoryIds);
+      }
       })
       this.routeParams = params;
       this.categoryId = this.discussionService.getContext(CONTEXT_PROPS.cid);
@@ -128,7 +130,7 @@ export class DiscussHomeComponent implements OnInit {
     if (_.get(event, 'message') === 'success') {
       this.discussionList = [];
       this.pagination.currentPage = this.pagination.first.page;
-      this.getDiscussionList(_.get(this.routeParams, 'slug'));
+      this.getDiscussionList(this.routeParams);
     }
     this.showStartDiscussionModal = false;
   }

@@ -1,4 +1,5 @@
 import { ActivatedRoute, Router } from "@angular/router";
+import { NavigationServiceService } from "../../navigation-service.service";
 import { of, throwError } from "rxjs";
 import { NSDiscussData } from "../../models/discuss.model";
 import { ConfigService } from "../../services/config.service";
@@ -11,6 +12,7 @@ describe('DiscussCategoryComponent', () => {
 
   const mockDiscussionService: Partial<DiscussionService> = {};
   const mockConfigService: Partial<ConfigService> = {
+    getConfig: jest.fn().mockReturnValueOnce({routerSlug: false}),
     getCategories: jest.fn()
   };
   const mockRouter: Partial<Router> = {
@@ -21,6 +23,7 @@ describe('DiscussCategoryComponent', () => {
     setContext: jest.fn(),
     logImpression: jest.fn()
   };
+  const mockNavigationService: Partial<NavigationServiceService> = {};
 
   beforeAll(() => {
     discussCategoryComponent = new DiscussCategoryComponent(
@@ -29,6 +32,7 @@ describe('DiscussCategoryComponent', () => {
         mockRouter as Router,
         mockActivatedRoute as ActivatedRoute,
         mockTelemetryUtilsService as TelemetryUtilsService,
+        mockNavigationService as NavigationServiceService
     );
   });
 
@@ -112,15 +116,18 @@ describe('DiscussCategoryComponent', () => {
         'privileges.topics:create': true,
         children: []
       } as any
+      discussCategoryComponent.slug = {routerSlug: false};
+      mockConfigService.getConfig = jest.fn().mockReturnValue({routerSlug: false});
       mockDiscussionService.setContext = jest.fn();
-      mockConfigService.getRouterSlug = jest.fn();
+      mockConfigService.setCategoryid = jest.fn();
+      mockRouter.navigate = jest.fn();
+      mockNavigationService.navigate = jest.fn();
       mockDiscussionService.fetchSingleCategoryDetails = jest.fn(() => of(categoryResp))
       // act
       discussCategoryComponent.navigateToDiscussionPage('some_cid')
       // aseert
       setTimeout(() => {
         expect(mockDiscussionService.setContext).toHaveBeenCalled();
-        expect(mockRouter.navigate).toHaveBeenCalled();
         done();
       });
     });

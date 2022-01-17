@@ -6,6 +6,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { FormBuilder } from '@angular/forms';
 import { DiscussionDetailsComponent } from './discussion-details.component';
 import { Location } from '@angular/common';
+import { NavigationServiceService } from '../../navigation-service.service';
+
 describe('DiscussionDetailsComponent', () => {
   let discussionDetailsComponent: DiscussionDetailsComponent;
 
@@ -25,6 +27,7 @@ describe('DiscussionDetailsComponent', () => {
     listen: jest.fn()
   };
   const mockLocation: Partial<Location> = {};
+  const mockNavigationService: Partial<NavigationServiceService> = {};
 
   beforeAll(() => {
     discussionDetailsComponent = new DiscussionDetailsComponent(
@@ -35,7 +38,8 @@ describe('DiscussionDetailsComponent', () => {
       mockRouter as Router,
       mockTelemetryUtilsService as TelemetryUtilsService,
       mockRenderer2 as Renderer2,
-      mockLocation as Location
+      mockLocation as Location,
+      mockNavigationService as NavigationServiceService
     );
   });
 

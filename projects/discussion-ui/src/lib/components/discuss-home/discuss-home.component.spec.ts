@@ -1,16 +1,19 @@
 import { ActivatedRoute, Router } from "@angular/router";
-import { of, throwError } from "rxjs";
+import { of, ReplaySubject, throwError } from "rxjs";
 import { NSDiscussData } from "../../models/discuss.model";
 import { ConfigService } from "../../services/config.service";
 import { DiscussionService } from "../../services/discussion.service";
 import { TelemetryUtilsService } from "../../telemetry-utils.service";
 import { DiscussHomeComponent } from "./discuss-home.component"
+import { NavigationServiceService } from '../../navigation-service.service';
 
 describe('DiscussHomeComponent', () => {
   let discussHomeComponent: DiscussHomeComponent
 
   const mockDiscussionService: Partial<DiscussionService> = {};
-  const mockConfigService: Partial<ConfigService> = {};
+  const mockConfigService: Partial<ConfigService> = {
+    getCategories: jest.fn()
+  };
   const mockRouter: Partial<Router> = {
     navigate: jest.fn()
   };
@@ -18,6 +21,7 @@ describe('DiscussHomeComponent', () => {
   const mockTelemetryUtilsService: Partial<TelemetryUtilsService> = {
     logImpression: jest.fn()
   };
+  const mockNavigationService: Partial<NavigationServiceService> = {};
 
   beforeAll(() => {
     discussHomeComponent = new DiscussHomeComponent(
@@ -26,6 +30,7 @@ describe('DiscussHomeComponent', () => {
       mockDiscussionService as DiscussionService,
       mockConfigService as ConfigService,
       mockTelemetryUtilsService as TelemetryUtilsService,
+      mockNavigationService as NavigationServiceService
     );
   });
 
@@ -34,24 +39,20 @@ describe('DiscussHomeComponent', () => {
   });
 
   it('should create an instance of DiscussHomeComponent', () => {
+    // arrange
+    const params = {
+      slug: 'some_slug'
+    }
+    const cid = new  ReplaySubject(1)
+    mockActivatedRoute.params = of(params);
+    mockDiscussionService.getContext = jest.fn(() => 'some_cid');
+    mockConfigService.setCategoryId = jest.fn(() => cid as any);
+    // act
+    discussHomeComponent.ngOnInit();
+    
+    // asserta
+    expect(mockTelemetryUtilsService.logImpression).toHaveBeenCalledWith(NSDiscussData.IPageName.HOME);
     expect(discussHomeComponent).toBeTruthy();
-  });
-
-  describe('ngOnInit', () => {
-    it('should call getDiscussionList', () => {
-      // arrange
-      const params = {
-        slug: 'some_slug'
-      }
-      mockActivatedRoute.params = of(params);
-      mockDiscussionService.getContext = jest.fn(() => 'some_cid');
-      jest.spyOn(discussHomeComponent, 'getDiscussionList').mockImplementation()
-      // act
-      discussHomeComponent.ngOnInit();
-      // assert
-      expect(mockTelemetryUtilsService.logImpression).toHaveBeenCalledWith(NSDiscussData.IPageName.HOME);
-      expect(discussHomeComponent.getDiscussionList).toHaveBeenCalled();
-    });
   });
 
   describe('navigateToDiscussionDetails', () => {
@@ -64,16 +65,17 @@ describe('DiscussHomeComponent', () => {
       mockTelemetryUtilsService.uppendContext = jest.fn();
       mockTelemetryUtilsService.deleteContext = jest.fn();
       mockConfigService.getRouterSlug = jest.fn(() => 'some_slug');
+      mockNavigationService.navigate = jest.fn();
       const req = {
         tid: 'some_tid',
         slug: 'some_slug'
       }
+      mockConfigService.getConfig = jest.fn().mockReturnValue({routerSlug: false});
       // act
       discussHomeComponent.navigateToDiscussionDetails(req);
       // assert
       expect(mockTelemetryUtilsService.deleteContext).toHaveBeenCalledWith(context[0]);
       expect(mockTelemetryUtilsService.uppendContext).toHaveBeenCalled();
-      expect(mockRouter.navigate).toHaveBeenCalled();
     });
   });
 
@@ -90,13 +92,12 @@ describe('DiscussHomeComponent', () => {
       };
       mockDiscussionService.getContextBasedTopic = jest.fn(() => of(topics))
       // act
-      discussHomeComponent.getDiscussionList('some_slug');
+      discussHomeComponent.getDiscussionList('2');
       // assert
       setTimeout(() => {
         expect(discussHomeComponent.isTopicCreator).toBe(true);
         done()
       });
-      
     });
   });
 
