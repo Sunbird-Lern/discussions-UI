@@ -85,7 +85,7 @@
                   (click)="unBookMark(post);logTelemetry($event, post)" aria-label="unBookmark post"
                   id="un-bookmark-vote">
                   <!-- bookmark -->
-                  <img src="./assets/discussion-ui/images/select-bookmarks.png" class="icons"
+                  <img src="./assets/discussion-ui/images/select-bookmarks.png" class="icons bookmark-icon"
                     alt="select bookmark icon">
                 </span>
               </span>
@@ -99,12 +99,12 @@
                 0 comments</span>
             </div>
           </div>
-
-        </div>
         <!-- /card content -->
         <!-- post reply -->
         <lib-post-reply (actionEvent)="postReplyHandler($event, post); logTelemetry($event, post)" [mode]="'reply'"
           [showCancel]="false"></lib-post-reply>
+          
+        </div>
       </ng-container>
     <!-- /card end -->
 
