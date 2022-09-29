@@ -1,44 +1,45 @@
+::ng-deep:root {
+    // --df-category-card-label: var(--black);
+    // --df-category-card-text:var(--gray-400);
+    --df-category-card-label: var(--df-text);
+    --df-category-card-text: var(--df-text);
+}
+
 .category-card {
     box-shadow: 0 2px 1px -1px rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 1px 3px 0 rgba(0, 0, 0, .12);
-    background: var(--white);
-    color: rgba(0, 0, 0, .87);
+    background:var(--df-card-bg);
+    color: var(--df-text);
     transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1);
     display: block;
     position: relative;
-    border-radius: 4px;
-    // height: 12.8rem;
-    height: 100%;
+    border-radius: 0.25rem;
+    height: 11rem;
     width: auto;
     padding: 1rem;
-    z-index: 2;
-
-    @media (max-width: 768px) {
-        z-index: 1;
-    }
+    cursor: pointer;
 
     .category-card-header {
         display: flex;
         flex-direction: row;
         align-items: center;
-
-        .catergory-card-header-image {
-            // border: 1px solid #fed7d7;
+        
+        .category-card-header-image {
+            border: 0.0625rem solid var(--red-0);
             border-radius: 50%;
-            max-width: 50px;
+            max-width: 3.125rem;
             width: 100%;
-            height: 50px;
+            height: 3.125rem;
             position: relative;
-
-            .category-card-img {
+        
+            .category-card-img{
                 position: absolute;
-                top: 3px;
-                left: 3px;
-                width: 45px;
-                height: 45px;
-                vertical-align: middle;
+                top: 0.5rem;
+                left: 0.5rem;
+                width: 2rem;
+                height: 2rem;
             }
         }
-
+        
         .category-card-header-label {
             display: -webkit-box;
             -webkit-line-clamp: 2;
@@ -47,59 +48,50 @@
             /* autoprefixer: on */
             overflow: hidden;
             text-overflow: ellipsis;
-            color: rgba(0, 0, 0, .87);
-            word-break: break-all;
-            font-size: 1rem;
-            margin:0 1rem;
-            font-weight: 700 !important;
+            color: var(--df-category-card-label);
+            word-break:break-word;
+            margin: 0 0.5rem;
+            font-weight: 700;
         }
     }
-
+    
     .category-card-header-text {
-        color: #5f5f5f !important;
+        color: var(--df-category-card-text);
         /* autoprefixer: off */
         -webkit-box-orient: vertical;
         /* autoprefixer: on */
         display: -webkit-box;
-        -webkit-line-clamp: 2;
+        -webkit-line-clamp: 3;
         overflow: hidden;
         text-overflow: ellipsis;
         word-break: break-all;
-        font-size: 14px;
-        margin: 0.5rem 0;
+        padding: 0.5rem 0;
+        font-size: 0.875rem;
     }
-
+    
     .category-card-main {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        color: var(--df-category-card-text);
+        margin: 0.5rem 0;
+        font-size: 0.875rem;
+        font-weight: 700;
 
-        .category-card-main-content {
+        .category-card-main-content{
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: rgba(0, 0, 0, .6);
-
-            .post-label {
-                margin-left: 16px;
-                font-size: 14px;
-                font-weight: 700 !important;
-                font-family: inherit;
-            }
-
-            .discussion-label {
-                font-size: 14px;
-                font-weight: 700 !important;
-                font-family: inherit;
-            }
         }
-
-        .eye-icon {
-            background-repeat: no-repeat;
-            display: inline-block;
-            height: 24px;
-            width: 24px;
-            cursor: pointer;
+    
+        .post-label{
+            margin: 0 1rem;
+        }
+    
+        .eye-icon{
+            width: 1.4rem;
+            height: 1.4rem;
         }
     }
 }
+
+
+

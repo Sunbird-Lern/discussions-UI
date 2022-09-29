@@ -1,6 +1,6 @@
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { DiscussionService } from './../../services/discussion.service';
-import { Component, OnInit, ElementRef, ViewChild, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { NSDiscussData } from './../../models/discuss.model';
 import { TelemetryUtilsService } from './../../telemetry-utils.service';
 import { DiscussUtilsService } from '../../services/discuss-utils.service';
@@ -43,14 +43,15 @@ export class DiscussStartComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    (document.querySelector('[tabindex="-1"]') as HTMLElement).focus();
     // debugger
     this.telemetryUtils.logImpression(NSDiscussData.IPageName.START);
-    this.cIds = this.configService.getCategories();
-    // if (!this.categoryId) {
-    //   this.showSelectCategory = true;
-    // }
-
+    this.cIds = this.configService.getCategories()
+    if (this.categoryId) {
+      this.showSelectCategory = false;
+    } else {
     this.showSelectCategory = true;
+    }
 
     this.initializeData();
     this.initializeFormFields(this.topicData);
@@ -58,8 +59,8 @@ export class DiscussStartComponent implements OnInit {
 
   initializeFormFields(topicData) {
     this.startForm = this.formBuilder.group({
-      question: ['', Validators.required],
-      description: ['', Validators.required],
+      question: [null, [Validators.required, Validators.minLength(8)]],
+      description: [null, [Validators.required, Validators.minLength(8)]],
       tags: [],
       category: []
     });
@@ -79,6 +80,19 @@ export class DiscussStartComponent implements OnInit {
       this.startForm.controls['tags'].setValue(tags);
       this.validateForm();
     }
+  }
+
+  isFieldValid(field) {
+    let valueNoWhiteSpace = this.startForm.get(field).value;
+    if (valueNoWhiteSpace) {
+      const index = valueNoWhiteSpace.length;
+      if (index >= 2 && valueNoWhiteSpace.charAt(index - 2) === " ") {
+        this.startForm.patchValue({ replyContent: this.startForm.get(field).value.trim() });
+      } else {
+        this.startForm.patchValue({ replyContent: this.startForm.get(field).value.trimStart() })
+      }
+    }
+    return (!this.startForm.get(field).valid && this.startForm.get(field).dirty);
   }
 
   validateForm() {
@@ -103,8 +117,9 @@ export class DiscussStartComponent implements OnInit {
       });
     } else if (this.categoryId) {
       const req = {
-        cids: this.categoryId
+        cids: [this.categoryId]
       };
+      this.showSelectCategory = false;
       this.editable = false;
       this.discussService.getContextBasedDiscussion(req).subscribe((data: any) => {
         this.allCategories = data.result;
@@ -132,7 +147,6 @@ export class DiscussStartComponent implements OnInit {
   }
 
   public submitPost(form: any) {
-    this.enableSubmitButton = false;
     this.uploadSaveData = true;
     this.showErrorMsg = false;
     const postCreateReq = {

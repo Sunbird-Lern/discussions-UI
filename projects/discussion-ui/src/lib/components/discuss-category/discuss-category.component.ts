@@ -77,6 +77,8 @@ export class DiscussCategoryComponent implements OnInit, OnDestroy {
         this.categories.push(data);
       }, error => {
         // TODO: Toast error
+        // error code check
+        this.discussService.showTrafficAlert(error);
         console.log('issue fetching category', error);
         this.showLoader = false;
       });
@@ -90,6 +92,8 @@ export class DiscussCategoryComponent implements OnInit, OnDestroy {
       this.categories = data
     }, error => {
       // TODO: Toast error
+      // error code check
+      this.discussService.showTrafficAlert(error);
       console.log('issue fetching category', error);
       this.showLoader = false;
     });
@@ -113,8 +117,10 @@ export class DiscussCategoryComponent implements OnInit, OnDestroy {
       this.showStartDiscussionModal = false;
       let input
       if (_.get(response, 'children').length > 0) {
-        input = { data: { url: '', queryParams: { cid: this.categoryId } }, action: this.categoryAction}
-        this.navigationService.navigate(input)
+        this.router.navigate([], { relativeTo: this.activatedRoute.parent, queryParams: { cid: this.categoryId } });
+
+        // input = { data: { url: '', queryParams: { cid: this.categoryId } }, action: this.categoryAction}
+        // this.navigationService.navigate(input)
 
         _.get(response, 'children').forEach(subCategoryData => {
           this.categories.push(subCategoryData);
@@ -124,11 +130,13 @@ export class DiscussCategoryComponent implements OnInit, OnDestroy {
         this.configService.setCategoryid(this.categoryId)
 
         let routerSlug = this.configService.getConfig().routerSlug ? this.configService.getConfig().routerSlug : ''
-        input = { data: { url: `${routerSlug}${CONSTANTS.ROUTES.CATEGORY}${this.categoryId}`, queryParams: {} }, action: CONSTANTS.STATES.CATEGORY_HOME, }
+        input = { data: { url: `${routerSlug}${CONSTANTS.ROUTES.CATEGORY}${this.categoryId}`, queryParams: {} }, action: CONSTANTS.CATEGORY_HOME, }
         this.navigationService.navigate(input)
         this.stateChange.emit({ action: this.categoryAction, categoryId: this.categoryId })
       }
     }, error => {
+      // error code check
+      this.discussService.showTrafficAlert(error);
       this.showLoader = false;
       // TODO: Toast error
       console.log('issue fetching category', error);

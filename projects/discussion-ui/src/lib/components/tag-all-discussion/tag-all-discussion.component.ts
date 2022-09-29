@@ -76,13 +76,7 @@ export class TagAllDiscussionComponent implements OnInit {
     this.fetchSingleCategoryLoader = true
     this.discussService.getTagBasedDiscussion(tagname).subscribe(
       (data: NSDiscussData.IDiscussionData) => {
-        this.similarPosts = [];
-        _.filter(data.topics, (topic) => {
-          if (topic.user.uid !== 0) {
-            this.similarPosts.push(topic)
-          }
-        })
-        // this.similarPosts = data.topics
+        this.similarPosts = data.topics
         this.paginationData = data.pagination
         this.fetchSingleCategoryLoader = false
         this.setPagination()
@@ -104,13 +98,7 @@ export class TagAllDiscussionComponent implements OnInit {
 
     this.discussService.getContextBasedTagDiscussion(req).subscribe(
       (data: NSDiscussData.IDiscussionData) => {
-        this.similarPosts = [];
-        _.filter(data.result, (topic) => {
-          if (topic.user.uid !== 0) {
-            this.similarPosts.push(topic)
-          }
-        })
-        // this.similarPosts = data.resul
+        this.similarPosts = data.result
         // this.paginationData = data.pagination
         this.fetchSingleCategoryLoader = false
         this.setPagination()
@@ -152,7 +140,6 @@ export class TagAllDiscussionComponent implements OnInit {
 
   /** Method to navigate to the dicussion detail page on click of tag related discussion */
   navigateToDiscussionDetails(discussionData) {
-    debugger
     const matchedTopic = _.find(this.telemetryUtils.getContext(), { type: 'Topic' });
     if (matchedTopic) {
       this.telemetryUtils.deleteContext(matchedTopic);
@@ -164,9 +151,9 @@ export class TagAllDiscussionComponent implements OnInit {
     });
 
     let slug = _.trim(_.get(discussionData, 'slug'))
-    let input = { data: { url: `${this.configService.getRouterSlug()}${CONSTANTS.ROUTES.TOPIC}${slug}`, queryParams: {} }, action: CONSTANTS.STATES.CATEGORY_DETAILS, }
+    let input = { data: { url: `${this.configService.getRouterSlug()}${CONSTANTS.ROUTES.TOPIC}${slug}`, queryParams: {} }, action: CONSTANTS.CATEGORY_DETAILS, }
     this.navigationService.navigate(input)
-    this.stateChange.emit({ action: CONSTANTS.STATES.CATEGORY_DETAILS, title: discussionData.title, tid: discussionData.tid })
+    this.stateChange.emit({ action: CONSTANTS.CATEGORY_DETAILS, title: discussionData.title, tid: discussionData.tid })
 
     // this.router.navigate([`${this.configService.getRouterSlug()}${CONSTANTS.ROUTES.TOPIC}${_.trim(_.get(discussionData, 'slug'))}`], { queryParamsHandling: "merge" });
   }

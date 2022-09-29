@@ -4,7 +4,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'lib-post-reply',
   templateUrl: './post-reply.component.html',
-  styleUrls: ['./post-reply.component.scss']
+  styleUrls: ['./post-reply.component.css']
 })
 export class PostReplyComponent implements OnInit {
   @Input() showCancel = true;
@@ -41,6 +41,19 @@ export class PostReplyComponent implements OnInit {
     } else {
       return false;
     }
+  }
+
+  isFieldValid(field) {
+    let valueNoWhiteSpace = this.replyForm.get(field).value;
+    if (valueNoWhiteSpace) {
+      const length = valueNoWhiteSpace.length;
+      if (length >= 2 && valueNoWhiteSpace.charAt(length - 2) === " ") {
+        this.replyForm.patchValue({ replyContent: this.replyForm.get(field).value.trim() });
+      } else {
+        this.replyForm.patchValue({ replyContent: this.replyForm.get(field).value.trimStart() })
+      }
+  }
+    return !this.replyForm.get(field).valid && this.replyForm.get(field).dirty;
   }
 
   onReplyClick(mode: string) {
