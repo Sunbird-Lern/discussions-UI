@@ -15,20 +15,20 @@
   },
   "homepage": "https://github.com/Sunbird-Ed/discussions-UI.git#readme",
   "peerDependencies": {
-    "@angular/common": "^13.4.0",
-    "@angular/core": "^13.4.0",
-    "@project-sunbird/client-services": "5.1.2",
-    "lodash-es": "^4.17.20",
-    "ngx-chips": ">=2.2.0",
-    "ngx-infinite-scroll": ">=8.0.2"
+    "@angular/common": "13.4.0",
+    "@angular/core": "13.4.0",
+    "@project-sunbird/client-services": "6.0.1",
+    "lodash-es": "4.17.21",
+    "ngx-chips": ">=2.2.2",
+    "ngx-infinite-scroll": "13.1.0"
   },
-  "description": "This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.0.",
+  "description": "This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.4.0.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Vinu Kumar",
   "dependencies": {
-    "tslib": "^2.0.0"
+    "tslib": "2.5.1"
   },
   "license": "ISC"
 }
