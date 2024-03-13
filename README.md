@@ -28,3 +28,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 | release branch    | npm package version | Angular Version |
 |-------------------|---------------------|-----------------|
 | 8.0.0_v15         |      8.0.0          |     Ng V15      |
+| 8.0.0_v16         |      8.0.1          |     Ng V16      |
+
