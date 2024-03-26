@@ -4,7 +4,7 @@
     "outDir": "../../out-tsc/lib",
     "target": "es2015",
     "declarationMap": true,
-    "module": "es2015",
+    "module": "es2020",
     "moduleResolution": "node",
     "resolveJsonModule": true, 
     "esModuleInterop": true,
