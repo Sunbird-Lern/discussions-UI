@@ -1,6 +1,7 @@
 import { ActivatedRoute, Router } from "@angular/router";
 import { of, throwError } from "rxjs";
 import { NSDiscussData } from "../../models/discuss.model";
+import { NavigationServiceService } from "../../navigation-service.service";
 import { ConfigService } from "../../services/config.service";
 import { DiscussUtilsService } from "../../services/discuss-utils.service";
 import { DiscussionService } from "../../services/discussion.service";
@@ -11,7 +12,9 @@ describe('DiscussCategoryComponent', () => {
   let discusstagsComponent: DiscussTagsComponent
 
   const mockDiscussionService: Partial<DiscussionService> = {};
-  const mockConfigService: Partial<ConfigService> = {};
+  const mockConfigService: Partial<ConfigService> = {
+    getConfig:jest.fn()
+  };
   const mockRouter: Partial<Router> = {};
   const mockActivatedRoute: Partial<ActivatedRoute> = {};
   const mockTelemetryUtilsService: Partial<TelemetryUtilsService> = {
@@ -19,6 +22,7 @@ describe('DiscussCategoryComponent', () => {
     logImpression: jest.fn()
   };
   const mockDiscussUtilsService: Partial<DiscussUtilsService> = {};
+  const mockNavigationService :Partial<NavigationServiceService>={};
 
 
   beforeAll(() => {
@@ -28,7 +32,8 @@ describe('DiscussCategoryComponent', () => {
       mockRouter as Router,
       mockActivatedRoute as ActivatedRoute,
       mockConfigService as ConfigService,
-      mockDiscussUtilsService as DiscussUtilsService
+      mockDiscussUtilsService as DiscussUtilsService,
+      mockNavigationService as NavigationServiceService
     );
   });
 

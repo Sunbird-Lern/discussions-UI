@@ -3,9 +3,10 @@ import { TelemetryUtilsService } from './../../telemetry-utils.service';
 import { ConfigService } from './../../services/config.service';
 import { DiscussionService } from './../../services/discussion.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { FormBuilder } from '@angular/forms';
+import { UntypedFormBuilder } from '@angular/forms';
 import { DiscussionDetailsComponent } from './discussion-details.component';
 import { Location } from '@angular/common';
+import { NavigationServiceService } from '../../navigation-service.service';
 describe('DiscussionDetailsComponent', () => {
   let discussionDetailsComponent: DiscussionDetailsComponent;
 
@@ -16,7 +17,7 @@ describe('DiscussionDetailsComponent', () => {
   const mockActivatedRoute: Partial<ActivatedRoute> = {};
   const mockDiscussService: Partial<DiscussionService> = {};
   const mockConfigService: Partial<ConfigService> = {};
-  const mockFormBuilder: Partial<FormBuilder> = {};
+  const mockFormBuilder: Partial<UntypedFormBuilder> = {};
   const mockTelemetryUtilsService: Partial<TelemetryUtilsService> = {
     uppendContext: jest.fn(),
     logInteract: jest.fn(),
@@ -25,17 +26,20 @@ describe('DiscussionDetailsComponent', () => {
     listen: jest.fn()
   };
   const mockLocation: Partial<Location> = {};
+  const mockNavigationService :Partial<NavigationServiceService>={};
 
   beforeAll(() => {
     discussionDetailsComponent = new DiscussionDetailsComponent(
       mockActivatedRoute as ActivatedRoute,
       mockDiscussService as DiscussionService,
       mockConfigService as ConfigService,
-      mockFormBuilder as FormBuilder,
+      mockFormBuilder as UntypedFormBuilder,
       mockRouter as Router,
       mockTelemetryUtilsService as TelemetryUtilsService,
       mockRenderer2 as Renderer2,
-      mockLocation as Location
+      mockLocation as Location,
+       mockNavigationService as NavigationServiceService
+
     );
   });
 

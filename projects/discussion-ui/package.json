@@ -1,6 +1,6 @@
 {
-  "name": "@project-sunbird/discussions-ui-v8",
-  "version": "2.6.0-beta.3",
+  "name": "@project-sunbird/discussions-ui",
+  "version": "8.0.3-v16",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Sunbird-Ed/discussions-UI.git"
@@ -15,17 +15,19 @@
   },
   "homepage": "https://github.com/Sunbird-Ed/discussions-UI.git#readme",
   "peerDependencies": {
-    "@angular/common": "^8.0.0",
-    "@angular/core": "^8.0.0",
-    "@project-sunbird/client-services": "4.2.3",
-    "lodash-es": "^4.17.20",
-    "ngx-chips": "2.0.2",
-    "ngx-infinite-scroll": "^8.0.2"
+    "@angular/common": "16.2.12",
+    "@angular/core": "16.2.12",
+    "@project-sunbird/client-services": "7.0.6",
+    "lodash-es": "4.17.21",
+    "ngx-chips": ">=2.2.0"
   },
   "description": "This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.0.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Vinu Kumar",
+  "dependencies": {
+    "tslib": "2.0.0"
+  },
   "license": "ISC"
 }

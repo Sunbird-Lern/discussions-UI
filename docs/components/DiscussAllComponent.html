@@ -1,0 +1,2745 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Sunbird Discussion UI Documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top d-block d-sm-none">
+            <a href="../" class="navbar-brand">Sunbird Discussion UI Documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
+  >
+  DiscussAllComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li class="nav-item">
+            <a href="#styleData" class="nav-link"
+                role="tab" id="styleData-tab" data-bs-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/lib/components/discuss-all/discuss-all.component.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code>OnInit</code>
+    </p>
+
+
+<section data-compodoc="block-metadata">
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>lib-discuss-all</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./discuss-all.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./discuss-all.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#activatedRoute" >activatedRoute</a>
+                            </li>
+                            <li>
+                                <a href="#allTopics" >allTopics</a>
+                            </li>
+                            <li>
+                                <a href="#categoryId" >categoryId</a>
+                            </li>
+                            <li>
+                                <a href="#cIds" >cIds</a>
+                            </li>
+                            <li>
+                                <a href="#currentActivePage" >currentActivePage</a>
+                            </li>
+                            <li>
+                                <a href="#currentFilter" >currentFilter</a>
+                            </li>
+                            <li>
+                                <a href="#data" >data</a>
+                            </li>
+                            <li>
+                                <a href="#discussionList" >discussionList</a>
+                            </li>
+                            <li>
+                                <a href="#fetchNewData" >fetchNewData</a>
+                            </li>
+                            <li>
+                                <a href="#getParams" >getParams</a>
+                            </li>
+                            <li>
+                                <a href="#isTopicCreator" >isTopicCreator</a>
+                            </li>
+                            <li>
+                                <a href="#isWidget" >isWidget</a>
+                            </li>
+                            <li>
+                                <a href="#paramsSubscription" >paramsSubscription</a>
+                            </li>
+                            <li>
+                                <a href="#routeParams" >routeParams</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#router" >router</a>
+                            </li>
+                            <li>
+                                <a href="#showLoader" >showLoader</a>
+                            </li>
+                            <li>
+                                <a href="#showStartDiscussionModal" >showStartDiscussionModal</a>
+                            </li>
+                            <li>
+                                <a href="#startDiscussionCategoryId" >startDiscussionCategoryId</a>
+                            </li>
+                            <li>
+                                <a href="#sticky" >sticky</a>
+                            </li>
+                            <li>
+                                <a href="#trendingTags" >trendingTags</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#acceptData" >acceptData</a>
+                            </li>
+                            <li>
+                                <a href="#closeModal" >closeModal</a>
+                            </li>
+                            <li>
+                                <a href="#fetchAllTags" >fetchAllTags</a>
+                            </li>
+                            <li>
+                                <a href="#fillPopular" >fillPopular</a>
+                            </li>
+                            <li>
+                                <a href="#fillrecent" >fillrecent</a>
+                            </li>
+                            <li>
+                                <a href="#filter" >filter</a>
+                            </li>
+                            <li>
+                                <a href="#getContextBasedDiscussion" >getContextBasedDiscussion</a>
+                            </li>
+                            <li>
+                                <a href="#getContextBasedTags" >getContextBasedTags</a>
+                            </li>
+                            <li>
+                                <a href="#getContextData" >getContextData</a>
+                            </li>
+                            <li>
+                                <a href="#getDiscussionList" >getDiscussionList</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getForumIds" >getForumIds</a>
+                            </li>
+                            <li>
+                                <a href="#getRecentData" >getRecentData</a>
+                            </li>
+                            <li>
+                                <a href="#loadDiscussionData" >loadDiscussionData</a>
+                            </li>
+                            <li>
+                                <a href="#logTelemetry" >logTelemetry</a>
+                            </li>
+                            <li>
+                                <a href="#navigateToDiscussionDetails" >navigateToDiscussionDetails</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#refreshData" >refreshData</a>
+                            </li>
+                            <li>
+                                <a href="#startDiscussion" >startDiscussion</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#categoryAction" >categoryAction</a>
+                            </li>
+                            <li>
+                                <a href="#context" >context</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Outputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#stateChange" >stateChange</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(router: Router, route: ActivatedRoute, discussionService: <a href="../injectables/DiscussionService.html" target="_self">DiscussionService</a>, configService: <a href="../injectables/ConfigService.html" target="_self">ConfigService</a>, activatedRoute: ActivatedRoute, telemetryUtils: <a href="../injectables/TelemetryUtilsService.html" target="_self">TelemetryUtilsService</a>, navigationService: <a href="../injectables/NavigationServiceService.html" target="_self">NavigationServiceService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">src/lib/components/discuss-all/discuss-all.component.ts:48</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                    <code>Router</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>route</td>
+                                                  
+                                                        <td>
+                                                                    <code>ActivatedRoute</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>discussionService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/DiscussionService.html" target="_self" >DiscussionService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>configService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ConfigService.html" target="_self" >ConfigService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>activatedRoute</td>
+                                                  
+                                                        <td>
+                                                                    <code>ActivatedRoute</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>telemetryUtils</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/TelemetryUtilsService.html" target="_self" >TelemetryUtilsService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>navigationService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/NavigationServiceService.html" target="_self" >NavigationServiceService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section data-compodoc="block-inputs">
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="categoryAction"></a>
+                        <b>categoryAction</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/lib/components/discuss-all/discuss-all.component.ts:26</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="context"></a>
+                        <b>context</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/lib/components/discuss-all/discuss-all.component.ts:25</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+    <section data-compodoc="block-outputs">
+    <h3 id="outputs">Outputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="stateChange"></a>
+                        <b>stateChange</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>EventEmitter&lt;any&gt;</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/lib/components/discuss-all/discuss-all.component.ts:28</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+    <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="acceptData"></a>
+                    <span class="name">
+                        <span ><b>acceptData</b></span>
+                        <a href="#acceptData"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>acceptData(singleTagDetails)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="132"
+                            class="link-to-prism">src/lib/components/discuss-all/discuss-all.component.ts:132</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>singleTagDetails</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="closeModal"></a>
+                    <span class="name">
+                        <span ><b>closeModal</b></span>
+                        <a href="#closeModal"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>closeModal(event)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="293"
+                            class="link-to-prism">src/lib/components/discuss-all/discuss-all.component.ts:293</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="fetchAllTags"></a>
+                    <span class="name">
+                        <span ><b>fetchAllTags</b></span>
+                        <a href="#fetchAllTags"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>fetchAllTags()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="242"
+                            class="link-to-prism">src/lib/components/discuss-all/discuss-all.component.ts:242</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="fillPopular"></a>
+                    <span class="name">
+                        <span ><b>fillPopular</b></span>
+                        <a href="#fillPopular"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>fillPopular(page?: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="174"
+                            class="link-to-prism">src/lib/components/discuss-all/discuss-all.component.ts:174</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>page</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="fillrecent"></a>
+                    <span class="name">
+                        <span ><b>fillrecent</b></span>
+                        <a href="#fillrecent"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>fillrecent(_page?: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="170"
+                            class="link-to-prism">src/lib/components/discuss-all/discuss-all.component.ts:170</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>_page</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="filter"></a>
+                    <span class="name">
+                        <span ><b>filter</b></span>
+                        <a href="#filter"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>filter(key: string | "recent" | "popular")</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="154"
+                            class="link-to-prism">src/lib/components/discuss-all/discuss-all.component.ts:154</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>key</td>
+                                    <td>
+                                            <code>string | &quot;recent&quot; | &quot;popular&quot;</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getContextBasedDiscussion"></a>
+                    <span class="name">
+                        <span ><b>getContextBasedDiscussion</b></span>
+                        <a href="#getContextBasedDiscussion"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getContextBasedDiscussion(cid: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="192"
+                            class="link-to-prism">src/lib/components/discuss-all/discuss-all.component.ts:192</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>cid</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getContextBasedTags"></a>
+                    <span class="name">
+                        <span ><b>getContextBasedTags</b></span>
+                        <a href="#getContextBasedTags"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getContextBasedTags(cid: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="254"
+                            class="link-to-prism">src/lib/components/discuss-all/discuss-all.component.ts:254</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>cid</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getContextData"></a>
+                    <span class="name">
+                        <span ><b>getContextData</b></span>
+                        <a href="#getContextData"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getContextData(cid: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="219"
+                            class="link-to-prism">src/lib/components/discuss-all/discuss-all.component.ts:219</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>cid</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getDiscussionList"></a>
+                    <span class="name">
+                        <span ><b>getDiscussionList</b></span>
+                        <a href="#getDiscussionList"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getDiscussionList(slug: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="140"
+                            class="link-to-prism">src/lib/components/discuss-all/discuss-all.component.ts:140</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>slug</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getForumIds"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>getForumIds</b></span>
+                        <a href="#getForumIds"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getForumIds()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="72"
+                            class="link-to-prism">src/lib/components/discuss-all/discuss-all.component.ts:72</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getRecentData"></a>
+                    <span class="name">
+                        <span ><b>getRecentData</b></span>
+                        <a href="#getRecentData"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getRecentData()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="200"
+                            class="link-to-prism">src/lib/components/discuss-all/discuss-all.component.ts:200</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loadDiscussionData"></a>
+                    <span class="name">
+                        <span ><b>loadDiscussionData</b></span>
+                        <a href="#loadDiscussionData"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>loadDiscussionData()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="95"
+                            class="link-to-prism">src/lib/components/discuss-all/discuss-all.component.ts:95</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="logTelemetry"></a>
+                    <span class="name">
+                        <span ><b>logTelemetry</b></span>
+                        <a href="#logTelemetry"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>logTelemetry(event)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="289"
+                            class="link-to-prism">src/lib/components/discuss-all/discuss-all.component.ts:289</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="navigateToDiscussionDetails"></a>
+                    <span class="name">
+                        <span ><b>navigateToDiscussionDetails</b></span>
+                        <a href="#navigateToDiscussionDetails"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>navigateToDiscussionDetails(discussionData)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="111"
+                            class="link-to-prism">src/lib/components/discuss-all/discuss-all.component.ts:111</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>discussionData</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="61"
+                            class="link-to-prism">src/lib/components/discuss-all/discuss-all.component.ts:61</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="refreshData"></a>
+                    <span class="name">
+                        <span ><b>refreshData</b></span>
+                        <a href="#refreshData"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>refreshData(page?: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="196"
+                            class="link-to-prism">src/lib/components/discuss-all/discuss-all.component.ts:196</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>page</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="startDiscussion"></a>
+                    <span class="name">
+                        <span ><b>startDiscussion</b></span>
+                        <a href="#startDiscussion"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>startDiscussion()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="280"
+                            class="link-to-prism">src/lib/components/discuss-all/discuss-all.component.ts:280</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="activatedRoute"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>activatedRoute</b></span>
+                        <a href="#activatedRoute"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>ActivatedRoute</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="55" class="link-to-prism">src/lib/components/discuss-all/discuss-all.component.ts:55</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="allTopics"></a>
+                    <span class="name">
+                        <span ><b>allTopics</b></span>
+                        <a href="#allTopics"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">src/lib/components/discuss-all/discuss-all.component.ts:43</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="categoryId"></a>
+                    <span class="name">
+                        <span ><b>categoryId</b></span>
+                        <a href="#categoryId"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/lib/components/discuss-all/discuss-all.component.ts:33</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="cIds"></a>
+                    <span class="name">
+                        <span ><b>cIds</b></span>
+                        <a href="#cIds"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/lib/components/discuss-all/discuss-all.component.ts:42</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="currentActivePage"></a>
+                    <span class="name">
+                        <span ><b>currentActivePage</b></span>
+                        <a href="#currentActivePage"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>1</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/lib/components/discuss-all/discuss-all.component.ts:37</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="currentFilter"></a>
+                    <span class="name">
+                        <span ><b>currentFilter</b></span>
+                        <a href="#currentFilter"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;recent&#x27;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/lib/components/discuss-all/discuss-all.component.ts:36</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="data"></a>
+                    <span class="name">
+                        <span ><b>data</b></span>
+                        <a href="#data"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">src/lib/components/discuss-all/discuss-all.component.ts:46</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="discussionList"></a>
+                    <span class="name">
+                        <span ><b>discussionList</b></span>
+                        <a href="#discussionList"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>any[]</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/lib/components/discuss-all/discuss-all.component.ts:30</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="fetchNewData"></a>
+                    <span class="name">
+                        <span ><b>fetchNewData</b></span>
+                        <a href="#fetchNewData"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/lib/components/discuss-all/discuss-all.component.ts:38</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getParams"></a>
+                    <span class="name">
+                        <span ><b>getParams</b></span>
+                        <a href="#getParams"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">src/lib/components/discuss-all/discuss-all.component.ts:41</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isTopicCreator"></a>
+                    <span class="name">
+                        <span ><b>isTopicCreator</b></span>
+                        <a href="#isTopicCreator"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/lib/components/discuss-all/discuss-all.component.ts:34</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isWidget"></a>
+                    <span class="name">
+                        <span ><b>isWidget</b></span>
+                        <a href="#isWidget"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">src/lib/components/discuss-all/discuss-all.component.ts:48</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="paramsSubscription"></a>
+                    <span class="name">
+                        <span ><b>paramsSubscription</b></span>
+                        <a href="#paramsSubscription"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Subscription</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/lib/components/discuss-all/discuss-all.component.ts:40</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="routeParams"></a>
+                    <span class="name">
+                        <span ><b>routeParams</b></span>
+                        <a href="#routeParams"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/lib/components/discuss-all/discuss-all.component.ts:31</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="router"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>router</b></span>
+                        <a href="#router"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Router</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="51" class="link-to-prism">src/lib/components/discuss-all/discuss-all.component.ts:51</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="showLoader"></a>
+                    <span class="name">
+                        <span ><b>showLoader</b></span>
+                        <a href="#showLoader"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/lib/components/discuss-all/discuss-all.component.ts:35</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="showStartDiscussionModal"></a>
+                    <span class="name">
+                        <span ><b>showStartDiscussionModal</b></span>
+                        <a href="#showStartDiscussionModal"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/lib/components/discuss-all/discuss-all.component.ts:32</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="startDiscussionCategoryId"></a>
+                    <span class="name">
+                        <span ><b>startDiscussionCategoryId</b></span>
+                        <a href="#startDiscussionCategoryId"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">src/lib/components/discuss-all/discuss-all.component.ts:47</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="sticky"></a>
+                    <span class="name">
+                        <span ><b>sticky</b></span>
+                        <a href="#sticky"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">src/lib/components/discuss-all/discuss-all.component.ts:45</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="trendingTags"></a>
+                    <span class="name">
+                        <span ><b>trendingTags</b></span>
+                        <a href="#trendingTags"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/ITag.html" target="_self" >NSDiscussData.ITag[]</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/lib/components/discuss-all/discuss-all.component.ts:44</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { CONTEXT_PROPS } from &#x27;./../../services/discussion.service&#x27;;
+import { Component, EventEmitter, Input, OnInit, Output, TemplateRef } from &#x27;@angular/core&#x27;;
+import { Router, ActivatedRoute } from &#x27;@angular/router&#x27;;
+import { DiscussionService } from &#x27;../../services/discussion.service&#x27;;
+import { ConfigService } from &#x27;../../services/config.service&#x27;;
+import { TelemetryUtilsService } from &#x27;./../../telemetry-utils.service&#x27;;
+import * as CONSTANTS from &#x27;./../../common/constants.json&#x27;;
+/* tslint:disable */
+import * as _ from &#x27;lodash&#x27;
+import { NSDiscussData } from &#x27;../../models/discuss.model&#x27;;
+import { DiscussStartComponent } from &#x27;../discuss-start/discuss-start.component&#x27;;
+import { Subscription } from &#x27;rxjs&#x27;;
+import { NavigationServiceService } from &#x27;../../navigation-service.service&#x27;;
+// import { BsModalService, BsModalRef } from &#x27;ngx-bootstrap/modal&#x27;;
+
+/* tslint:enable */
+
+@Component({
+  selector: &#x27;lib-discuss-all&#x27;,
+  templateUrl: &#x27;./discuss-all.component.html&#x27;,
+  styleUrls: [&#x27;./discuss-all.component.scss&#x27;]
+})
+export class DiscussAllComponent implements OnInit {
+
+  @Input() context: any
+  @Input() categoryAction;
+
+  @Output() stateChange: EventEmitter&lt;any&gt; &#x3D; new EventEmitter();
+
+  discussionList: any[];
+  routeParams: any;
+  showStartDiscussionModal &#x3D; false;
+  categoryId: string;
+  isTopicCreator &#x3D; false;
+  showLoader &#x3D; false;
+  currentFilter &#x3D; &#x27;recent&#x27;
+  currentActivePage: number &#x3D; 1;
+  fetchNewData: false;
+  // modalRef: BsModalRef;
+  paramsSubscription: Subscription;
+  getParams: any;
+  cIds: any &#x3D; [];
+  allTopics: any;
+  trendingTags!: NSDiscussData.ITag[];
+  sticky &#x3D; false;
+  data
+  startDiscussionCategoryId: any;
+  isWidget: boolean;
+
+  constructor(
+    public router: Router,
+    private route: ActivatedRoute,
+    private discussionService: DiscussionService,
+    private configService: ConfigService,
+    public activatedRoute: ActivatedRoute,
+    private telemetryUtils: TelemetryUtilsService,
+    private navigationService: NavigationServiceService
+    // private modalService: BsModalService
+  ) { }
+
+  ngOnInit() {
+    this.telemetryUtils.logImpression(NSDiscussData.IPageName.HOME);
+    if (this.context) {
+      this.isWidget  &#x3D; true
+      this.getForumIds()
+    } else {
+      this.cIds &#x3D; this.configService.getCategories().result
+      this.loadDiscussionData()
+    }
+  }
+
+  async getForumIds() {
+    let body &#x3D; {
+      &quot;identifier&quot;:
+        this.context.contextIdArr
+      ,
+      &quot;type&quot;: this.context.contextType
+    }
+    let resp &#x3D; await this.discussionService.getForumIds(body)
+    if (resp.result.length &gt; 0) {
+      resp.result.forEach(forum &#x3D;&gt; {
+        this.cIds.push(forum.cid)
+      });
+    } else {
+      this.discussionService.createForum(this.context.categoryObj).subscribe(((data: any) &#x3D;&gt; {
+        data.result.forEach(forum &#x3D;&gt; {
+          this.cIds.push(forum.newCid)
+        });
+      }))
+
+    }
+    this.loadDiscussionData()
+  }
+
+  loadDiscussionData() {
+    // debugger
+    // this.cIds &#x3D; this.context ? this.context.categories : this.configService.getCategories()
+    this.categoryId &#x3D; this.discussionService.getContext(CONTEXT_PROPS.cid);
+    if (this.configService.hasContext() || this.context) {
+      this.getContextBasedDiscussion(this.cIds)
+      // This is to show context based trending tags
+      this.getContextBasedTags(this.cIds);
+    } else {
+      // this.currentActivePage &#x3D; 1
+      this.refreshData();
+      // This is to show trending tags
+      this.fetchAllTags();
+    }
+  }
+
+  navigateToDiscussionDetails(discussionData) {
+
+    const matchedTopic &#x3D; _.find(this.telemetryUtils.getContext(), { type: &#x27;Topic&#x27; });
+    if (matchedTopic) {
+      this.telemetryUtils.deleteContext(matchedTopic);
+    }
+
+    this.telemetryUtils.uppendContext({
+      id: _.get(discussionData, &#x27;tid&#x27;),
+      type: &#x27;Topic&#x27;
+    });
+
+    const slug &#x3D; _.trim(_.get(discussionData, &#x27;slug&#x27;));
+    // tslint:disable-next-line: max-line-length
+    const input &#x3D; { data: { url: &#x60;${this.configService.getRouterSlug()}${CONSTANTS.ROUTES.TOPIC}${slug}&#x60;, queryParams: {} }, action: CONSTANTS.CATEGORY_DETAILS, }
+    this.navigationService.navigate(input);
+    this.stateChange.emit({ action: CONSTANTS.CATEGORY_DETAILS, title: discussionData.title, tid: discussionData.tid });
+
+    // this.router.navigate([&#x60;${this.configService.getRouterSlug()}${CONSTANTS.ROUTES.TOPIC}${slug}&#x60;], { queryParamsHandling: &quot;merge&quot; });
+  }
+
+  acceptData(singleTagDetails) {
+    // debugger
+    if(this.context){
+    singleTagDetails.cIds &#x3D;  this.cIds;
+    }
+    this.stateChange.emit(singleTagDetails);
+  }
+
+  getDiscussionList(slug: string) {
+    this.showLoader &#x3D; true;
+    // TODO : this.currentActivePage shoulb be dynamic when pagination will be implemented
+    this.discussionService.getContextBasedTopic(slug, this.currentActivePage).subscribe(data &#x3D;&gt; {
+      this.showLoader &#x3D; false;
+      this.isTopicCreator &#x3D; _.get(data, &#x27;privileges.topics:create&#x27;) &#x3D;&#x3D;&#x3D; true ? true : false;
+      this.discussionList &#x3D; _.union(_.get(data, &#x27;topics&#x27;), _.get(data, &#x27;children&#x27;));
+    }, error &#x3D;&gt; {
+      this.showLoader &#x3D; false;
+      // TODO: Toaster
+      console.log(&#x27;error fetching topic list&#x27;, error);
+    });
+  }
+
+  filter(key: string | &#x27;recent&#x27; | &#x27;popular&#x27;) {
+    if (key) {
+      this.currentFilter &#x3D; key;
+      switch (key) {
+        case &#x27;recent&#x27;:
+          this.cIds.length ? this.getContextData(this.cIds.result) : this.fillrecent()
+          break;
+        case &#x27;popular&#x27;:
+          this.cIds.length ? this.getContextData(this.cIds.result) : this.fillPopular()
+          break;
+        default:
+          break;
+      }
+    }
+  }
+
+  fillrecent(_page?: any) {
+    this.getRecentData();
+  }
+
+  fillPopular(page?: any) {
+    this.showLoader &#x3D; true;
+    return this.discussionService.fetchPopularD(page).subscribe((response: any) &#x3D;&gt; {
+      this.showLoader &#x3D; false;
+      this.discussionList &#x3D; [];
+      _.filter(response.topics, (topic) &#x3D;&gt; {
+        if (topic.user.uid !&#x3D;&#x3D; 0 &amp;&amp; topic.cid !&#x3D;&#x3D; 1 ) {
+          this.discussionList.push(topic);
+        }
+      });
+      // this.discussionList &#x3D; _.get(response, &#x27;topics&#x27;)
+    }, error &#x3D;&gt; {
+      this.showLoader &#x3D; false;
+      // TODO: Toaster
+      console.log(&#x27;error fetching topic list&#x27;, error);
+    });
+  }
+
+  getContextBasedDiscussion(cid: any) {
+    this.currentFilter &#x3D;&#x3D;&#x3D; &#x27;recent&#x27; ? this.getContextData(cid) : this.getContextData(cid)
+  }
+
+  refreshData(page?: any) {
+    this.currentFilter &#x3D;&#x3D;&#x3D; &#x27;recent&#x27; ? this.getRecentData() : this.fillPopular(page)
+  }
+
+  getRecentData() {
+    this.showLoader &#x3D; true;
+    return this.discussionService.fetchRecentPost().subscribe(
+      (data: any) &#x3D;&gt; {
+        this.showLoader &#x3D; false;
+        this.discussionList &#x3D; [];
+        _.filter(data.topics, (topic) &#x3D;&gt; {
+          if (topic.user.uid !&#x3D;&#x3D; 0 &amp;&amp; topic.cid !&#x3D;&#x3D; 1) {
+            this.discussionList.push(topic);
+          }
+        });
+        this.discussionList &#x3D; _.get(data, &#x27;posts&#x27;);
+      }, error &#x3D;&gt; {
+        this.showLoader &#x3D; false;
+        // TODO: Toaster
+        console.log(&#x27;error fetching topic list&#x27;, error);
+      });
+  }
+
+  getContextData(cid: any) {
+    this.showLoader &#x3D; true;
+    const req &#x3D; {
+      // request: {
+      cids: cid
+      // }
+    };
+    return this.discussionService.getContextBasedDiscussion(req).subscribe(
+      (data: any) &#x3D;&gt; {
+        this.showLoader &#x3D; false;
+        let result &#x3D; data.result
+        let res &#x3D; result.filter((elem) &#x3D;&gt; {
+          return (elem.statusCode !&#x3D;&#x3D; 404)
+        })
+        this.allTopics &#x3D; _.map(res, (topic) &#x3D;&gt; topic.topics);
+        this.discussionList &#x3D; _.flatten(this.allTopics)
+      }, error &#x3D;&gt; {
+        this.showLoader &#x3D; false;
+        // TODO: Toaster
+        console.log(&#x27;error fetching topic list&#x27;, error);
+      });
+  }
+
+  fetchAllTags() {
+    this.showLoader &#x3D; true;
+    this.discussionService.fetchAllTag().subscribe(data &#x3D;&gt; {
+      this.showLoader &#x3D; false;
+      this.trendingTags &#x3D; _.get(data, &#x27;tags&#x27;);
+    }, error &#x3D;&gt; {
+      this.showLoader &#x3D; false;
+      // TODO: toaster
+      console.log(&#x27;error fetching tags&#x27;);
+    });
+  }
+
+  getContextBasedTags(cid: any) {
+    const req &#x3D; {
+      cids: cid
+    }
+    this.showLoader &#x3D; true;
+    this.discussionService.contextBasedTags(req).subscribe(data &#x3D;&gt; {
+      this.showLoader &#x3D; false;
+      this.trendingTags &#x3D; _.get(data, &#x27;result&#x27;);
+    }, error &#x3D;&gt; {
+      this.showLoader &#x3D; false;
+      // TODO: toaster
+      console.log(&#x27;error fetching tags&#x27;);
+    });
+  }
+
+  // startDiscussion(template: TemplateRef&lt;any&gt;) {
+  //   this.modalRef &#x3D; this.modalService.show(template);
+
+  // this.showStartDiscussionModal &#x3D; true;
+  // this.bsModalRef &#x3D; this.modalService.show(DiscussStartComponent);
+
+  // this.bsModalRef.content.onClose().subscribe(
+  //   console.log(&#x27;completed&#x27;)
+  // );
+  // }
+
+  startDiscussion() {
+    debugger
+    this.showStartDiscussionModal &#x3D; true;
+    if (this.context) {
+      this.startDiscussionCategoryId &#x3D; this.cIds;
+    }
+
+  }
+
+  logTelemetry(event) {
+    this.telemetryUtils.logInteract(event, NSDiscussData.IPageName.HOME);
+  }
+
+  closeModal(event) {
+    if (_.get(event, &#x27;message&#x27;) &#x3D;&#x3D;&#x3D; &#x27;success&#x27;) {
+      if (this.context) {
+        this.getContextBasedDiscussion(this.cIds)
+      } else {
+        this.refreshData()
+      }
+      // this.getDiscussionList(_.get(this.routeParams, &#x27;slug&#x27;));
+    }
+    this.showStartDiscussionModal &#x3D; false;
+  }
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;main-div&quot;&gt;
+
+    &lt;!-- &lt;button (click)&#x3D;&quot;startDiscussion();logTelemetry($event)&quot; class&#x3D;&quot;df-btn df-btn-normal df-btn-primary&quot; data-toggle&#x3D;&quot;modal&quot;
+        data-target&#x3D;&quot;#myModal&quot; id&#x3D;&quot;start-discussion&quot;&gt;Start Discussion&lt;/button&gt; --&gt;
+
+
+    &lt;div class&#x3D;&quot;flex flex-1 custom discussion_outer_box&quot;&gt;
+        &lt;div class&#x3D;&quot;flex flex-3 flex-column discussion_main_box&quot;&gt;
+            &lt;div (click)&#x3D;&quot;startDiscussion();logTelemetry($event)&quot; data-toggle&#x3D;&quot;modal&quot;
+            data-target&#x3D;&quot;#myModal&quot; id&#x3D;&quot;start-discussion&quot;&gt;
+                &lt;a href&#x3D;&quot;javascript:void(0)&quot; class&#x3D;&quot;flex flex-1 cursor-pointer margin-fix height-48&quot; i18n-aria-label role&#x3D;&quot;link&quot;&gt;
+                  &lt;div
+                    class&#x3D;&quot;flex flex-1 items-center border discuss border-solid discuss-border ws-mat-primary-background-op100 &quot;&gt;
+                    &lt;div class&#x3D;&quot;w-full discuss truncate&quot;&gt;
+                      &lt;span class&#x3D;&quot;overflow ml-4 start-btn-hint mb-0 mat-body-1&quot;&gt;Ask a question or post an idea&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;discuss-home text-white flex items-center justify-center cursor-pointer mat-subheading-2&quot;&gt;
+                      Start discussion
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;!-- &lt;div class&#x3D;&quot;text-box&quot;&gt;Ask a question or post an idea&lt;/div&gt; 
+              &lt;div class&#x3D;&quot;buton&quot;&gt;start discussion&lt;/div&gt; --&gt;
+                &lt;/a&gt;
+              &lt;/div&gt;
+
+            &lt;ng-container&gt;
+                &lt;div class&#x3D;&quot;flex flex-1 flex-row margin-fix tab_margin&quot;&gt;
+                    &lt;div class&#x3D;&quot;flex flex-1 filter max-height-60&quot;&gt;
+                        &lt;a href&#x3D;&quot;javascript:void(0)&quot; role&#x3D;&quot;link&quot; class&#x3D;&quot;filter-option&quot; [ngClass]&#x3D;&quot;{&#x27;tabs-active&#x27; : currentFilter &#x3D;&#x3D;&#x3D; &#x27;recent&#x27;,
+          &#x27; font-medium&#x27;:currentFilter !&#x3D;&#x3D; &#x27;recent&#x27;}&quot; mat-button (click)&#x3D;&quot;filter(&#x27;recent&#x27;)&quot; role&#x3D;&quot;button&quot;&gt;Recent&lt;/a&gt;
+                        &lt;a href&#x3D;&quot;javascript:void(0)&quot;  role&#x3D;&quot;link&quot; class&#x3D;&quot;filter-option&quot; [ngClass]&#x3D;&quot;{&#x27;tabs-active&#x27; : currentFilter &#x3D;&#x3D;&#x3D; &#x27;popular&#x27;,
+          &#x27; font-medium&#x27;:currentFilter !&#x3D;&#x3D; &#x27;popular&#x27;}&quot; mat-button (click)&#x3D;&quot;filter(&#x27;popular&#x27;)&quot; role&#x3D;&quot;button&quot;&gt;Popular&lt;/a&gt;
+                        &lt;a href&#x3D;&quot;javascript:void(0)&quot;  role&#x3D;&quot;link&quot; class&#x3D;&quot;filter-option watching_link&quot;  mat-button role&#x3D;&quot;button&quot;&gt;Watching&lt;/a&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;flex items-center&quot;&gt;
+                        &lt;a class&#x3D;&quot;all_category_link mat-subheading-2 margin-remove&quot;&gt;All categories &lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/ng-container&gt;
+            &lt;!-- &lt;lib-app-loader *ngIf&#x3D;&quot;showLoader&quot;&gt;&lt;/lib-app-loader&gt; --&gt;
+
+
+            &lt;ng-container *ngIf&#x3D;&quot;discussionList  &amp;&amp; discussionList.length &gt; 0&quot;&gt;
+                &lt;div (click)&#x3D;&quot;navigateToDiscussionDetails(data);logTelemetry($event)&quot;
+                    *ngFor&#x3D;&quot;let data of discussionList&quot; id&#x3D;&quot;discuss-card&quot;&gt;
+                    &lt;lib-discuss-card [discussionData]&#x3D;&quot;data&quot;&gt;&lt;/lib-discuss-card&gt;
+                &lt;/div&gt;
+            &lt;/ng-container&gt;
+
+            &lt;ng-container *ngIf&#x3D;&quot; !(discussionList &amp;&amp; discussionList.length &gt; 0)&quot;&gt;
+                &lt;div class&#x3D;&quot;no-card-content&quot; tabindex&#x3D;&quot;0&quot;&gt;
+                    &lt;div class&#x3D;&quot;no-data-label&quot;&gt;No Data&lt;/div&gt;
+                    &lt;div&gt;
+                        &lt;span&gt;&amp;nbsp;&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/ng-container&gt;
+            &lt;!-- &lt;div class&#x3D;&quot;flex flex-1 flex-column margin-fix pagination-container&quot;&gt;
+            &lt;ws-app-pagination [pager]&#x3D;&quot;pager&quot; (changePage)&#x3D;&quot;navigateWithPage($event)&quot;&gt;&lt;/ws-app-pagination&gt;
+        &lt;/div&gt; --&gt;
+        &lt;/div&gt;
+        &lt;div *ngIf&#x3D;&quot;!isWidget&quot; class&#x3D;&quot;flex flex-1 right_tag_box&quot; #stickyMenu [class.sticky]&#x3D;&quot;sticky&quot;&gt;
+            &lt;lib-discuss-trending-tags [tags]&#x3D;&quot;trendingTags&quot; (stateChange)&#x3D;&quot;acceptData($event)&quot;&gt;&lt;/lib-discuss-trending-tags&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;lib-discuss-start (close)&#x3D;&quot;closeModal($event)&quot; *ngIf&#x3D;&quot;showStartDiscussionModal&quot; [categoryId]&#x3D;&quot;startDiscussionCategoryId&quot;&gt;
+    &lt;/lib-discuss-start&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="styleData">
+                <p class="comment">
+                    <code>./discuss-all.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">// @import &#x27;ws-common&#x27;;
+// @import &#x27;ws-vars&#x27;;
+// @import &#x27;ws-mixins&#x27;;
+// @import &quot;node_modules/bootstrap/scss/bootstrap&quot;;
+
+.fade:not(.show) {
+  opacity: 1 !important;
+}
+
+.buton {
+  display: flex;
+  border: 0.0625rem solid;
+  flex: 1;
+  background: var(--red);
+  align-content: center;
+  text-align: center;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  z-index: 10;
+  width: 100%;
+}
+
+.text-box {
+  display: flex;
+  border: 0.0625rem solid;
+  flex: 3;
+  align-content: center;
+  text-align: center;
+}
+
+// .margin-fix {
+//   @include breakpoint-xs {
+//     margin: 0 $size-l 0 $size-l;
+//   }
+
+//   @include breakpoint-s {
+//     margin: 0 $size-l 0 $size-l;
+//   }
+// }
+
+.overflow {
+  // @include breakpoint-xs {
+  //   width: 10em;
+  //   // outline: 1px solid #000;
+  //   margin: 0 0 2em 0;
+  //   text-overflow: ellipsis !important;
+  //   /**
+  //  * Required properties to achieve text-overflow
+  //  */
+  //   white-space: nowrap;
+  //   overflow: hidden;
+  // }
+  overflow: hidden;
+}
+
+// .custom {
+
+// height: 48px;
+// max-height: 48px;
+// @include breakpoint-xs {
+//   flex-direction: column;
+// }
+
+// @include breakpoint-s {
+//   flex-direction: column;
+// }
+// }
+
+// .pagination-container {
+//   // margin-top: $size-l;
+
+// }
+
+.font-medium {
+  font-weight: 500 !important;
+}
+
+.discuss-border {
+  border-radius: 0.25rem;
+  /*.75rem;*/
+  border: 0.0625rem solid var(--gray-200);
+  flex: 1;
+  // max-width: 500px;
+  /* border-color: #cecece;*/
+}
+
+.discuss .mat-form-field-wrapper {
+  padding-bottom: 0px;
+
+  .mat-form-field-infix {
+    border-top-width: 0.25rem !important;
+    padding: 0px;
+    padding-bottom: 0.25rem;
+  }
+
+}
+
+.discuss-home {
+  background: var(--primary) 0% 0% no-repeat padding-box;
+  border-radius: 0px 0.25rem 0.25rem 0px;
+  padding: 0.875rem 2rem;
+  // text-decoration: underline;
+  /* flex: 1; */
+  min-width: fit-content;
+  margin: 0 1rem 1rem;
+}
+
+.flex-3 {
+  flex: 3;
+}
+
+.filter {
+  .filter-option {
+    // margin: $size-xs $size-m;
+    /* border-bottom: darkslateblue; */
+    border-radius: 0;
+    border-bottom-width: 0.125rem;
+    border-top-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-bottom: 0.0625rem solid var(--black);
+  }
+  .filter-option.tabs-active {
+    border-bottom: 0.1875rem solid var(--blue);
+  }
+}
+
+// .max-height-60 {
+//   max-height: 60px;
+// }
+
+// .height-48 {
+//   max-height: 48px;
+// }
+
+.start-btn-hint{
+  display: block;
+  margin-bottom: 0;
+  padding: 1rem;
+}
+.tab_margin {
+  margin-bottom: 1rem !important;
+}
+a.all_category_link {
+ color:  var(--primary);
+ display: none;
+}
+
+.watching_link{
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+  .main-div {
+    display: block!important;
+    width:100%!important;
+    padding: 0px 0px!important;
+  }
+  .discussion_outer_box  {
+    display: block!important;
+  }
+  .discussion_main_box, .right_tag_box {
+    width: 100%;
+    display: block!important;
+    float: none;
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="main-div">    <!-- <button (click)="startDiscussion();logTelemetry($event)" class="df-btn df-btn-normal df-btn-primary" data-toggle="modal"        data-target="#myModal" id="start-discussion">Start Discussion</button> -->    <div class="flex flex-1 custom discussion_outer_box">        <div class="flex flex-3 flex-column discussion_main_box">            <div (click)="startDiscussion();logTelemetry($event)" data-toggle="modal"            data-target="#myModal" id="start-discussion">                <a href="javascript:void(0)" class="flex flex-1 cursor-pointer margin-fix height-48" i18n-aria-label role="link">                  <div                    class="flex flex-1 items-center border discuss border-solid discuss-border ws-mat-primary-background-op100 ">                    <div class="w-full discuss truncate">                      <span class="overflow ml-4 start-btn-hint mb-0 mat-body-1">Ask a question or post an idea</span>                    </div>                    <div class="discuss-home text-white flex items-center justify-center cursor-pointer mat-subheading-2">                      Start discussion                    </div>                  </div>                  <!-- <div class="text-box">Ask a question or post an idea</div>               <div class="buton">start discussion</div> -->                </a>              </div>            <ng-container>                <div class="flex flex-1 flex-row margin-fix tab_margin">                    <div class="flex flex-1 filter max-height-60">                        <a href="javascript:void(0)" role="link" class="filter-option" [ngClass]="{\'tabs-active\' : currentFilter === \'recent\',          \' font-medium\':currentFilter !== \'recent\'}" mat-button (click)="filter(\'recent\')" role="button">Recent</a>                        <a href="javascript:void(0)"  role="link" class="filter-option" [ngClass]="{\'tabs-active\' : currentFilter === \'popular\',          \' font-medium\':currentFilter !== \'popular\'}" mat-button (click)="filter(\'popular\')" role="button">Popular</a>                        <a href="javascript:void(0)"  role="link" class="filter-option watching_link"  mat-button role="button">Watching</a>                    </div>                    <div class="flex items-center">                        <a class="all_category_link mat-subheading-2 margin-remove">All categories </a>                    </div>                </div>            </ng-container>            <!-- <lib-app-loader *ngIf="showLoader"></lib-app-loader> -->            <ng-container *ngIf="discussionList  && discussionList.length > 0">                <div (click)="navigateToDiscussionDetails(data);logTelemetry($event)"                    *ngFor="let data of discussionList" id="discuss-card">                    <lib-discuss-card [discussionData]="data"></lib-discuss-card>                </div>            </ng-container>            <ng-container *ngIf=" !(discussionList && discussionList.length > 0)">                <div class="no-card-content" tabindex="0">                    <div class="no-data-label">No Data</div>                    <div>                        <span>&nbsp;</span>                    </div>                </div>            </ng-container>            <!-- <div class="flex flex-1 flex-column margin-fix pagination-container">            <ws-app-pagination [pager]="pager" (changePage)="navigateWithPage($event)"></ws-app-pagination>        </div> -->        </div>        <div *ngIf="!isWidget" class="flex flex-1 right_tag_box" #stickyMenu [class.sticky]="sticky">            <lib-discuss-trending-tags [tags]="trendingTags" (stateChange)="acceptData($event)"></lib-discuss-trending-tags>        </div>    </div>    <lib-discuss-start (close)="closeModal($event)" *ngIf="showStartDiscussionModal" [categoryId]="startDiscussionCategoryId">    </lib-discuss-start></div></div>'
+    var COMPONENTS = [{'name': 'AppLoaderComponent', 'selector': 'lib-app-loader'},{'name': 'AvatarPhotoComponent', 'selector': 'lib-avatar-photo'},{'name': 'BaseWrapperComponent', 'selector': 'sb-base-wrapper'},{'name': 'CategoryCardComponent', 'selector': 'lib-category-card'},{'name': 'CategoryWidgetComponent', 'selector': 'sb-category-widget'},{'name': 'DiscussAllComponent', 'selector': 'lib-discuss-all'},{'name': 'DiscussCardComponent', 'selector': 'lib-discuss-card'},{'name': 'DiscussCategoryComponent', 'selector': 'lib-discuss-category'},{'name': 'DiscussHomeComponent', 'selector': 'lib-discuss-home'},{'name': 'DiscussionDetailsComponent', 'selector': 'lib-discussion-details'},{'name': 'DiscussStartComponent', 'selector': 'lib-discuss-start'},{'name': 'DiscussTagsComponent', 'selector': 'lib-discuss-tags'},{'name': 'LibEntryComponent', 'selector': 'lib-lib-entry'},{'name': 'LoadAlertComponent', 'selector': 'lib-load-alert'},{'name': 'MyDiscussionComponent', 'selector': 'lib-my-discussion'},{'name': 'PostReplyComponent', 'selector': 'lib-post-reply'},{'name': 'RelatedDiscussionComponent', 'selector': 'lib-related-discussion'},{'name': 'SidePannelComponent', 'selector': 'lib-side-pannel'},{'name': 'SlidersComponent', 'selector': 'ws-widget-sliders'},{'name': 'TagAllDiscussionComponent', 'selector': 'lib-tag-all-discussion'},{'name': 'TagsWidgetComponent', 'selector': 'sb-tags-widget'},{'name': 'TrendingTagsComponent', 'selector': 'lib-discuss-trending-tags'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'DiscussAllComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'DiscussAllComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

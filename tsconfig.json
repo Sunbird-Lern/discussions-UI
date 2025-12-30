@@ -5,15 +5,14 @@
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
-    "module": "es2015",
+    "module": "es2020",
     "moduleResolution": "node",
-    "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "importHelpers": true,
     "allowSyntheticDefaultImports": true,
-    "target": "es5",
+    "target": "ES2022",
     "typeRoots": [
       "node_modules/@types"
     ],
@@ -28,6 +27,10 @@
       "discussion-ui/*": [
         "dist/discussion-ui/*"
       ]
-    }
-  }
+    },
+    "useDefineForClassFields": false
+  },
+  "angularCompilerOptions": {
+  "compilationMode": "partial"
+  } 
 }

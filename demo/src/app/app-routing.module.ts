@@ -4,12 +4,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'discussion-forum' , loadChildren: './wrapper/wrapper.module#WrapperModule',
+    path: 'discussion-forum' , loadChildren: () => import('./wrapper/wrapper.module').then(m => m.WrapperModule),
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

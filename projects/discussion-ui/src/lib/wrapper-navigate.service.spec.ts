@@ -1,4 +1,6 @@
 import { TestBed } from '@angular/core/testing';
+import 'zone.js';
+import 'zone.js/testing';
 
 import { WrapperNavigateService } from './wrapper-navigate.service';
 

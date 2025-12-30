@@ -1,0 +1,1332 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Sunbird Discussion UI Documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top d-block d-sm-none">
+            <a href="../" class="navbar-brand">Sunbird Discussion UI Documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
+  >
+  LibEntryComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li class="nav-item">
+            <a href="#styleData" class="nav-link"
+                role="tab" id="styleData-tab" data-bs-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/lib/components/lib-entry/lib-entry.component.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code>OnInit</code>
+                <code>OnDestroy</code>
+    </p>
+
+
+<section data-compodoc="block-metadata">
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">host</td>
+                <td class="col-md-9"><code>{<br>}</code></td>
+            </tr>
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>lib-lib-entry</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./lib-entry.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./lib-entry.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#activatedRoute" >activatedRoute</a>
+                            </li>
+                            <li>
+                                <a href="#banner" >banner</a>
+                            </li>
+                            <li>
+                                <a href="#bannerOption" >bannerOption</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#bannerSubscription" >bannerSubscription</a>
+                            </li>
+                            <li>
+                                <a href="#config" >config</a>
+                            </li>
+                            <li>
+                                <a href="#currentRoute" >currentRoute</a>
+                            </li>
+                            <li>
+                                <a href="#data" >data</a>
+                            </li>
+                            <li>
+                                <a href="#headerOption" >headerOption</a>
+                            </li>
+                            <li>
+                                <a href="#histtoryStartIndex" >histtoryStartIndex</a>
+                            </li>
+                            <li>
+                                <a href="#pageKey" >pageKey</a>
+                            </li>
+                            <li>
+                                <a href="#showLoaderAlert" >showLoaderAlert</a>
+                            </li>
+                            <li>
+                                <a href="#subscription" >subscription</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#close" >close</a>
+                            </li>
+                            <li>
+                                <a href="#closeLoadAlert" >closeLoadAlert</a>
+                            </li>
+                            <li>
+                                <a href="#goBack" >goBack</a>
+                            </li>
+                            <li>
+                                <a href="#handleLoaderAlert" >handleLoaderAlert</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnDestroy" >ngOnDestroy</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#onScrollTopActive" >onScrollTopActive</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(activatedRoute: ActivatedRoute, discussionService: <a href="../injectables/DiscussionService.html" target="_self">DiscussionService</a>, configService: <a href="../injectables/ConfigService.html" target="_self">ConfigService</a>, location: Location, navigationServiceService: <a href="../injectables/NavigationServiceService.html" target="_self">NavigationServiceService</a>, discussionEventService: <a href="../injectables/DiscussionEventsService.html" target="_self">DiscussionEventsService</a>, telemetryUtils: <a href="../injectables/TelemetryUtilsService.html" target="_self">TelemetryUtilsService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/lib/components/lib-entry/lib-entry.component.ts:38</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>activatedRoute</td>
+                                                  
+                                                        <td>
+                                                                    <code>ActivatedRoute</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>discussionService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/DiscussionService.html" target="_self" >DiscussionService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>configService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ConfigService.html" target="_self" >ConfigService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>location</td>
+                                                  
+                                                        <td>
+                                                                    <code>Location</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>navigationServiceService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/NavigationServiceService.html" target="_self" >NavigationServiceService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>discussionEventService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/DiscussionEventsService.html" target="_self" >DiscussionEventsService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>telemetryUtils</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/TelemetryUtilsService.html" target="_self" >TelemetryUtilsService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="close"></a>
+                    <span class="name">
+                        <span ><b>close</b></span>
+                        <a href="#close"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>close(event)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="95"
+                            class="link-to-prism">src/lib/components/lib-entry/lib-entry.component.ts:95</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="closeLoadAlert"></a>
+                    <span class="name">
+                        <span ><b>closeLoadAlert</b></span>
+                        <a href="#closeLoadAlert"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>closeLoadAlert()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="105"
+                            class="link-to-prism">src/lib/components/lib-entry/lib-entry.component.ts:105</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="goBack"></a>
+                    <span class="name">
+                        <span ><b>goBack</b></span>
+                        <a href="#goBack"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>goBack()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="87"
+                            class="link-to-prism">src/lib/components/lib-entry/lib-entry.component.ts:87</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="handleLoaderAlert"></a>
+                    <span class="name">
+                        <span ><b>handleLoaderAlert</b></span>
+                        <a href="#handleLoaderAlert"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>handleLoaderAlert()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="80"
+                            class="link-to-prism">src/lib/components/lib-entry/lib-entry.component.ts:80</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnDestroy"></a>
+                    <span class="name">
+                        <span ><b>ngOnDestroy</b></span>
+                        <a href="#ngOnDestroy"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnDestroy()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="109"
+                            class="link-to-prism">src/lib/components/lib-entry/lib-entry.component.ts:109</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="58"
+                            class="link-to-prism">src/lib/components/lib-entry/lib-entry.component.ts:58</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onScrollTopActive"></a>
+                    <span class="name">
+                        <span ><b>onScrollTopActive</b></span>
+                        <a href="#onScrollTopActive"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onScrollTopActive(event)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="113"
+                            class="link-to-prism">src/lib/components/lib-entry/lib-entry.component.ts:113</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="activatedRoute"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>activatedRoute</b></span>
+                        <a href="#activatedRoute"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>ActivatedRoute</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">src/lib/components/lib-entry/lib-entry.component.ts:41</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="banner"></a>
+                    <span class="name">
+                        <span ><b>banner</b></span>
+                        <a href="#banner"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/lib/components/lib-entry/lib-entry.component.ts:30</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="bannerOption"></a>
+                    <span class="name">
+                        <span ><b>bannerOption</b></span>
+                        <a href="#bannerOption"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/lib/components/lib-entry/lib-entry.component.ts:32</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="bannerSubscription"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>bannerSubscription</b></span>
+                        <a href="#bannerSubscription"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/lib/components/lib-entry/lib-entry.component.ts:31</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="config"></a>
+                    <span class="name">
+                        <span ><b>config</b></span>
+                        <a href="#config"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/lib/components/lib-entry/lib-entry.component.ts:35</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="currentRoute"></a>
+                    <span class="name">
+                        <span ><b>currentRoute</b></span>
+                        <a href="#currentRoute"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;all-discussions&#x27;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/lib/components/lib-entry/lib-entry.component.ts:33</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="data"></a>
+                    <span class="name">
+                        <span ><b>data</b></span>
+                        <a href="#data"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/IdiscussionConfig.html" target="_self" >IdiscussionConfig</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/lib/components/lib-entry/lib-entry.component.ts:28</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="headerOption"></a>
+                    <span class="name">
+                        <span ><b>headerOption</b></span>
+                        <a href="#headerOption"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>true</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/lib/components/lib-entry/lib-entry.component.ts:29</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="histtoryStartIndex"></a>
+                    <span class="name">
+                        <span ><b>histtoryStartIndex</b></span>
+                        <a href="#histtoryStartIndex"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/lib/components/lib-entry/lib-entry.component.ts:36</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="pageKey"></a>
+                    <span class="name">
+                        <span ><b>pageKey</b></span>
+                        <a href="#pageKey"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/lib/components/lib-entry/lib-entry.component.ts:34</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="showLoaderAlert"></a>
+                    <span class="name">
+                        <span ><b>showLoaderAlert</b></span>
+                        <a href="#showLoaderAlert"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/lib/components/lib-entry/lib-entry.component.ts:37</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="subscription"></a>
+                    <span class="name">
+                        <span ><b>subscription</b></span>
+                        <a href="#subscription"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Subscription</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/lib/components/lib-entry/lib-entry.component.ts:38</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { DiscussionService } from &#x27;./../../services/discussion.service&#x27;;
+import { ActivatedRoute } from &#x27;@angular/router&#x27;;
+import { Component, OnDestroy, OnInit } from &#x27;@angular/core&#x27;;
+import { Location } from &#x27;@angular/common&#x27;;
+import { DiscussionEventsService } from &#x27;./../../discussion-events.service&#x27;;
+import { TelemetryUtilsService } from &#x27;./../../telemetry-utils.service&#x27;;
+import { NSDiscussData } from &#x27;./../../models/discuss.model&#x27;;
+
+/* tslint:disable */
+import * as _ from &#x27;lodash&#x27;
+import { IdiscussionConfig } from &#x27;../../models/discussion-config.model&#x27;;
+import { ConfigService } from &#x27;../../services/config.service&#x27;;
+import { Inject } from &#x27;@angular/core&#x27;;
+import { NavigationServiceService } from &#x27;../../navigation-service.service&#x27;;
+import { AbstractConfigService } from &#x27;../../services/abstract-config.service&#x27;;
+import { Subscription } from &#x27;rxjs&#x27;;
+/* tslint:enable */
+@Component({
+  selector: &#x27;lib-lib-entry&#x27;,
+  templateUrl: &#x27;./lib-entry.component.html&#x27;,
+  styleUrls: [&#x27;./lib-entry.component.scss&#x27;],
+  /* tslint:disable */
+  host: { class: &#x27;flex-1 main_discuss_lib&#x27;,},
+  /* tslint:enable */
+})
+export class LibEntryComponent implements OnInit, OnDestroy {
+
+  data: IdiscussionConfig;
+  headerOption &#x3D; true;
+  banner: any
+  private bannerSubscription: any
+  bannerOption: boolean;
+  currentRoute &#x3D; &#x27;all-discussions&#x27;
+  pageKey: string;
+  config: any;
+  histtoryStartIndex: number;
+  showLoaderAlert &#x3D; false;
+  subscription: Subscription
+
+  constructor(
+    public activatedRoute: ActivatedRoute,
+    private discussionService: DiscussionService,
+    private configService: ConfigService,
+    private location: Location,
+    private navigationServiceService: NavigationServiceService,
+    private discussionEventService: DiscussionEventsService,
+    private telemetryUtils: TelemetryUtilsService,
+    // @Inject(&#x27;configService&#x27;) protected configService: AbstractConfigService
+
+  ) {
+    this.bannerSubscription &#x3D; this.activatedRoute.data.subscribe(data &#x3D;&gt; {
+      if (data &amp;&amp; data.pageData) {
+        this.banner &#x3D; data.pageData.data.banner || []
+      }
+    })
+  }
+
+  ngOnInit() {
+    /**
+     * calling the initservice to tell navigationservice to use the router service
+     * because this component is invoke only in router approach 
+     */
+    this.navigationServiceService.initService(&#x27;routerService&#x27;)
+    this.histtoryStartIndex &#x3D; window.history.length-1;
+    this.configService.setConfig(this.activatedRoute);
+    // this.activatedRoute.data.subscribe((data) &#x3D;&gt; {
+    this.data &#x3D; this.configService.getConfig();
+    if (!this.data) {
+      // fallback for query params
+      this.configService.setConfigFromParams(this.activatedRoute);
+      this.data &#x3D; this.configService.getConfig();
+    }
+    this.discussionService.userId &#x3D; _.get(this.data, &#x27;userId&#x27;);
+    const rawCategories &#x3D; _.get(this.data, &#x27;categories&#x27;);
+    this.discussionService.forumIds &#x3D; _.get(rawCategories, &#x27;result&#x27;);
+    this.discussionService.initializeUserDetails(this.discussionService.userId);
+    this.handleLoaderAlert();
+   }
+
+  handleLoaderAlert(){
+
+    this.subscription &#x3D; this.discussionService.alertEvent.subscribe(() &#x3D;&gt; {
+      this.showLoaderAlert &#x3D; true;
+    })
+  }
+
+  goBack() {
+    const eventAction &#x3D; {
+      action: &#x27;DF_BACK&#x27;
+    };
+    this.discussionEventService.emitTelemetry(eventAction);
+    this.location.back();
+  }
+
+  close(event) {
+    this.showLoaderAlert &#x3D; false;
+    const eventAction &#x3D; {
+      action: &#x27;DF_CLOSE&#x27;
+    };
+    this.discussionEventService.emitTelemetry(eventAction);
+    this.telemetryUtils.logInteract(event, NSDiscussData.IPageName.LIB_ENTRY);
+    window.history.go(-(window.history.length - this.histtoryStartIndex ));
+  }
+
+  closeLoadAlert(){
+    this.showLoaderAlert &#x3D; false;
+  }
+
+  ngOnDestroy(){
+    this.subscription.unsubscribe()
+  }
+
+  onScrollTopActive(event) {
+    window.scroll({
+      top: 0, 
+      left: 0, 
+      behavior: &#x27;smooth&#x27;
+    });
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;sbt-inside-page-container ui container&quot;&gt;
+    &lt;div class&#x3D;&quot;df-header&quot;&gt;
+        &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;df-btn df-btn-normal df-btn-primary df-back-btn&quot; tabindex&#x3D;&quot;0&quot; autofocus
+            role&#x3D;&quot;button&quot; (click)&#x3D;&quot;goBack()&quot;&gt;
+            &lt;img src&#x3D;&quot;./assets/discussion-ui/images/back-img.png&quot; alt&#x3D;&quot;back icon&quot; /&gt;
+            Back
+        &lt;/button&gt;
+        &lt;button (click)&#x3D;&quot;close($event)&quot; class&#x3D;&quot;df-btn df-btn-normal df-btn-danger df-close-btn&quot; tabindex&#x3D;&quot;0&quot;
+            id&#x3D;&quot;close-discussion-forum&quot; type&#x3D;&quot;button&quot; autofocus&gt;
+            Close
+            &lt;img src&#x3D;&quot;./assets/discussion-ui/images/close.png&quot; alt&#x3D;&quot;close icon&quot; /&gt;
+        &lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;div class&#x3D;&quot;discussion-forum-content&quot;&gt;
+        &lt;div class&#x3D;&quot;discuss-left-panel&quot;&gt;
+            &lt;lib-side-pannel&gt;&lt;/lib-side-pannel&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;discuss-right-panel&quot;&gt;
+            &lt;router-outlet (activate)&#x3D;&quot;onScrollTopActive($event)&quot;&gt;&lt;/router-outlet&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;lib-load-alert *ngIf&#x3D;&quot;showLoaderAlert&quot; (exit)&#x3D;&quot;close($event)&quot; (close)&#x3D;&quot;closeLoadAlert()&quot;&gt;&lt;/lib-load-alert&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="styleData">
+                <p class="comment">
+                    <code>./lib-entry.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">::ng-deep:root {
+  --df-header-bg:var(--df-common-bg);
+}
+
+.df-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background: var(--df-header-bg);
+  margin-bottom: 1rem;
+
+  .df-back-btn {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 1rem;
+      height: 1rem;
+      margin-right: 0.25rem;
+      filter: invert(1);
+    }
+  }
+
+  .df-close-btn {
+    img {
+      width: 0.5rem;
+      height: 0.5rem;
+      margin-left: 0.25rem;
+      filter: invert(1);
+    }
+  }
+}
+
+.discussion-forum-content {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-gap: 1.5rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ui.container {
+  display: block;
+  max-width: 100%!important;
+
+  @media only screen and (max-width: 767px){
+      width: auto!important;
+      margin-left: 1em!important;
+      margin-right: 1em!important;
+  }
+  
+  @media only screen and (max-width: 1800px) and (min-width: 768px){
+          width: 90%;
+          margin-left: auto !important;
+          margin-right: auto !important;
+  }
+}
+
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="sbt-inside-page-container ui container">    <div class="df-header">        <button type="button" class="df-btn df-btn-normal df-btn-primary df-back-btn" tabindex="0" autofocus            role="button" (click)="goBack()">            <img src="./assets/discussion-ui/images/back-img.png" alt="back icon" />            Back        </button>        <button (click)="close($event)" class="df-btn df-btn-normal df-btn-danger df-close-btn" tabindex="0"            id="close-discussion-forum" type="button" autofocus>            Close            <img src="./assets/discussion-ui/images/close.png" alt="close icon" />        </button>    </div>    <div class="discussion-forum-content">        <div class="discuss-left-panel">            <lib-side-pannel></lib-side-pannel>        </div>        <div class="discuss-right-panel">            <router-outlet (activate)="onScrollTopActive($event)"></router-outlet>        </div>    </div></div><lib-load-alert *ngIf="showLoaderAlert" (exit)="close($event)" (close)="closeLoadAlert()"></lib-load-alert></div>'
+    var COMPONENTS = [{'name': 'AppLoaderComponent', 'selector': 'lib-app-loader'},{'name': 'AvatarPhotoComponent', 'selector': 'lib-avatar-photo'},{'name': 'BaseWrapperComponent', 'selector': 'sb-base-wrapper'},{'name': 'CategoryCardComponent', 'selector': 'lib-category-card'},{'name': 'CategoryWidgetComponent', 'selector': 'sb-category-widget'},{'name': 'DiscussAllComponent', 'selector': 'lib-discuss-all'},{'name': 'DiscussCardComponent', 'selector': 'lib-discuss-card'},{'name': 'DiscussCategoryComponent', 'selector': 'lib-discuss-category'},{'name': 'DiscussHomeComponent', 'selector': 'lib-discuss-home'},{'name': 'DiscussionDetailsComponent', 'selector': 'lib-discussion-details'},{'name': 'DiscussStartComponent', 'selector': 'lib-discuss-start'},{'name': 'DiscussTagsComponent', 'selector': 'lib-discuss-tags'},{'name': 'LibEntryComponent', 'selector': 'lib-lib-entry'},{'name': 'LoadAlertComponent', 'selector': 'lib-load-alert'},{'name': 'MyDiscussionComponent', 'selector': 'lib-my-discussion'},{'name': 'PostReplyComponent', 'selector': 'lib-post-reply'},{'name': 'RelatedDiscussionComponent', 'selector': 'lib-related-discussion'},{'name': 'SidePannelComponent', 'selector': 'lib-side-pannel'},{'name': 'SlidersComponent', 'selector': 'ws-widget-sliders'},{'name': 'TagAllDiscussionComponent', 'selector': 'lib-tag-all-discussion'},{'name': 'TagsWidgetComponent', 'selector': 'sb-tags-widget'},{'name': 'TrendingTagsComponent', 'selector': 'lib-discuss-trending-tags'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'LibEntryComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'LibEntryComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

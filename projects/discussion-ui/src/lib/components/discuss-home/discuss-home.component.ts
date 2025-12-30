@@ -21,7 +21,7 @@ export class DiscussHomeComponent implements OnInit {
   @Input() categoryHomeAction;
   @Output() stateChange: EventEmitter<any> = new EventEmitter();
 
-  @ViewChild('scrollContainerHeight', { static: false }) elementView: ElementRef;
+  @ViewChild('scrollContainerHeight') elementView: ElementRef;
   discussionList = [];
   routeParams: any;
   showStartDiscussionModal = false;

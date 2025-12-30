@@ -17,7 +17,7 @@ import { combineLatest } from 'rxjs';
 })
 export class MyDiscussionComponent implements OnInit {
 
-  @ViewChild('scrollContainerHeight', { static: false }) elementView: ElementRef;
+  @ViewChild('scrollContainerHeight') elementView: ElementRef;
   data; // this is for user
   discussionList = []; // this is for posts
   currentFilter = 'timestamp';

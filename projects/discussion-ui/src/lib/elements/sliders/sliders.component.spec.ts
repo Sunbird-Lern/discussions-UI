@@ -1,4 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import 'zone.js';
+import 'zone.js/testing';
 
 import { SlidersComponent } from './sliders.component';
 
@@ -6,7 +8,7 @@ describe('SlidersComponent', () => {
   let component: SlidersComponent;
   let fixture: ComponentFixture<SlidersComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ SlidersComponent ]
     })

@@ -1,4 +1,4 @@
-import { FormBuilder } from "@angular/forms";
+import { UntypedFormBuilder } from "@angular/forms";
 import { ActivatedRoute, Router } from "@angular/router";
 import { of, throwError } from "rxjs";
 import { NSDiscussData } from "../../models/discuss.model";
@@ -12,7 +12,7 @@ describe('DiscussHomeComponent', () => {
   let discussStartComponent: DiscussStartComponent
 
   const mockDiscussionService: Partial<DiscussionService> = {};
-  const mockFormBuilder: Partial<FormBuilder> = {};
+  const mockFormBuilder: Partial<UntypedFormBuilder> = {};
   const mockTelemetryUtilsService: Partial<TelemetryUtilsService> = {
     logImpression: jest.fn()
   };
@@ -22,7 +22,7 @@ describe('DiscussHomeComponent', () => {
   beforeAll(() => {
     discussStartComponent = new DiscussStartComponent(
       mockDiscussionService as DiscussionService,
-      mockFormBuilder as FormBuilder,
+      mockFormBuilder as UntypedFormBuilder,
       mockTelemetryUtilsService as TelemetryUtilsService,
       mockConfigService as ConfigService,
       mockDiscussUtilsService as DiscussUtilsService

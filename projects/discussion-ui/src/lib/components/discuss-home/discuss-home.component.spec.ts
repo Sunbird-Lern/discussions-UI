@@ -1,6 +1,7 @@
 import { ActivatedRoute, Router } from "@angular/router";
 import { of, throwError } from "rxjs";
 import { NSDiscussData } from "../../models/discuss.model";
+import { NavigationServiceService } from "../../navigation-service.service";
 import { ConfigService } from "../../services/config.service";
 import { DiscussionService } from "../../services/discussion.service";
 import { TelemetryUtilsService } from "../../telemetry-utils.service";
@@ -18,6 +19,8 @@ describe('DiscussHomeComponent', () => {
   const mockTelemetryUtilsService: Partial<TelemetryUtilsService> = {
     logImpression: jest.fn()
   };
+  const mockNavigationService :Partial<NavigationServiceService>={};
+
 
   beforeAll(() => {
     discussHomeComponent = new DiscussHomeComponent(
@@ -26,6 +29,7 @@ describe('DiscussHomeComponent', () => {
       mockDiscussionService as DiscussionService,
       mockConfigService as ConfigService,
       mockTelemetryUtilsService as TelemetryUtilsService,
+      mockNavigationService as NavigationServiceService
     );
   });
 
