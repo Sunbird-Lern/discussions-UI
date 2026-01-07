@@ -1,6 +1,6 @@
 import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { CsModule } from '@project-sunbird/client-services';
+import { CsModule } from '@jeraldj/client-services';
 
 @Component({
   selector: 'app-root',
