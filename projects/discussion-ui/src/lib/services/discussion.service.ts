@@ -7,8 +7,8 @@ import { NSDiscussData } from '../models/discuss.model';
 
 /* tslint:disable */
 import * as _ from 'lodash'
-import { CsDiscussionService } from '@project-sunbird/client-services/services/discussion';
-import { CsModule } from '@project-sunbird/client-services';
+import { CsDiscussionService } from '@jeraldj/client-services/services/discussion';
+import { CsModule } from '@jeraldj/client-services';
 /* tslint:enable */
 
 export const CONTEXT_PROPS = {
